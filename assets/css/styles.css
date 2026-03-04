@@ -308,30 +308,53 @@ h1 { font-size: clamp(2rem, 4vw, 3rem); margin-top: 0.85rem; color: var(--primar
 }
 .service-btn {
   text-align: left;
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, #fff 0%, #f9f5ee 100%);
-  border-radius: 16px;
-  padding: 1rem;
+  border: 1px solid rgba(114, 47, 55, 0.28);
+  background: linear-gradient(160deg, #fff8f5 0%, #fff 52%, #f5f8f3 100%);
+  border-radius: 999px;
+  padding: 1.05rem 1.2rem;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 18px rgba(114, 47, 55, 0.09);
+  position: relative;
+  overflow: hidden;
 }
 .service-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(33, 76, 61, 0.12);
-  border-color: #d6c7b1;
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 14px 28px rgba(114, 47, 55, 0.16);
+  border-color: rgba(107, 123, 60, 0.4);
+}
+.service-btn::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  right: -36px;
+  top: -56px;
+  background: radial-gradient(circle, rgba(114, 47, 55, 0.17) 0%, rgba(114, 47, 55, 0) 68%);
+  pointer-events: none;
+}
+.service-btn:nth-child(even) {
+  border-color: rgba(107, 123, 60, 0.32);
+}
+.service-btn:nth-child(even)::before {
+  background: radial-gradient(circle, rgba(107, 123, 60, 0.2) 0%, rgba(107, 123, 60, 0) 68%);
 }
 .service-btn-title {
   display: block;
   font-family: "Playfair Display", serif;
-  font-size: 1.1rem;
-  color: var(--primary);
+  font-size: 1.08rem;
+  color: #722f37;
+  position: relative;
+  z-index: 1;
 }
 .service-btn-sub {
   display: block;
-  margin-top: 0.2rem;
-  color: var(--muted);
-  font-size: 0.9rem;
+  margin-top: 0.23rem;
+  color: #556b2f;
+  font-size: 0.88rem;
+  position: relative;
+  z-index: 1;
 }
 
 .split {
