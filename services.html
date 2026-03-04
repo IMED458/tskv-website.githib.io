@@ -36,30 +36,68 @@
   </header>
 
   <main class="section">
-    <div class="container grid cards-2">
-      <article class="panel">
-        <h2>გიდებისთვის</h2>
-        <div class="rich-text" data-content-key="guides_html"></div>
-      </article>
+    <div class="container">
+      <section class="hero" style="padding-top:0.2rem;">
+        <div class="hero-grid">
+          <div>
+            <span class="kicker">სერვისები • სრული ინფორმაცია</span>
+            <h1>აირჩიე კატეგორია და ნახე დეტალები</h1>
+            <p>
+              განლაგება დაბრუნებულია უფრო სუფთა, პირვანდელ სტილთან ახლო ხედზე.
+              ქვემოთ ღილაკებზე დაჭერით იხსნება პატარა ფანჯარა სრულ ტექსტებთან.
+            </p>
+          </div>
+          <article class="hero-card">
+            <img src="assets/images/s.jpg" alt="დეგუსტაცია და სერვისები" />
+            <p>გიდებისთვის, ტურისტებისთვის, მაღაზიებისთვის, გამოცდილება და ხარისხი.</p>
+          </article>
+        </div>
+      </section>
 
-      <article class="panel">
-        <h2>მაღაზიებისთვის</h2>
-        <div class="rich-text" data-content-key="shops_html"></div>
-      </article>
+      <div class="section-head">
+        <div>
+          <h2>სერვისების ფანჯრები</h2>
+          <p>ღილაკზე დაჭერით გაიხსნება სრულფასოვანი აღწერა.</p>
+        </div>
+      </div>
 
-      <article class="panel">
-        <h2>ტურისტებისთვის</h2>
-        <div class="rich-text" data-content-key="tourists_html"></div>
-      </article>
-
-      <article class="panel">
-        <h2>მომსახურეობა / ხარისხი</h2>
-        <div class="rich-text" data-content-key="service_html"></div>
-        <hr style="border:none;border-top:1px solid var(--line);margin:1rem 0;">
-        <div class="rich-text" data-content-key="quality_html"></div>
-      </article>
+      <div class="service-actions">
+        <button class="service-btn" type="button" data-service-key="guides_html" data-service-title="გიდებისთვის">
+          <span class="service-btn-title">გიდებისთვის</span>
+          <span class="service-btn-sub">პაკეტები და პირობები</span>
+        </button>
+        <button class="service-btn" type="button" data-service-key="tourists_html" data-service-title="ტურისტებისთვის">
+          <span class="service-btn-title">ტურისტებისთვის</span>
+          <span class="service-btn-sub">ფოტოები და ვიზიტის ფორმატი</span>
+        </button>
+        <button class="service-btn" type="button" data-service-key="shops_html" data-service-title="მაღაზიებისთვის">
+          <span class="service-btn-title">მაღაზიებისთვის</span>
+          <span class="service-btn-sub">პროდუქციის მიწოდება</span>
+        </button>
+        <button class="service-btn" type="button" data-service-key="experience_html" data-service-title="გამოცდილება">
+          <span class="service-btn-title">გამოცდილება</span>
+          <span class="service-btn-sub">პრაქტიკული ჩართულობა</span>
+        </button>
+        <button class="service-btn" type="button" data-service-key="service_html" data-service-title="მომსახურეობა">
+          <span class="service-btn-title">მომსახურეობა</span>
+          <span class="service-btn-sub">რას გთავაზობთ</span>
+        </button>
+        <button class="service-btn" type="button" data-service-key="quality_html" data-service-title="ხარისხი">
+          <span class="service-btn-title">ხარისხი</span>
+          <span class="service-btn-sub">სტანდარტი და უსაფრთხოება</span>
+        </button>
+      </div>
     </div>
   </main>
+
+  <div id="service-modal" class="modal hidden" aria-hidden="true">
+    <div id="service-modal-overlay" class="modal-overlay"></div>
+    <div class="modal-panel service-modal-panel" role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
+      <button id="service-modal-close" class="modal-close" type="button" aria-label="დახურვა">×</button>
+      <h3 id="service-modal-title"></h3>
+      <div id="service-modal-content" class="rich-text"></div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-inner">

@@ -133,6 +133,44 @@ function renderNews(newsItems) {
     .join('');
 }
 
+function initServiceButtons(content) {
+  const buttons = document.querySelectorAll("[data-service-key]");
+  if (!buttons.length) return;
+
+  const modal = document.getElementById("service-modal");
+  const overlay = document.getElementById("service-modal-overlay");
+  const closeBtn = document.getElementById("service-modal-close");
+  const titleNode = document.getElementById("service-modal-title");
+  const contentNode = document.getElementById("service-modal-content");
+  if (!modal || !overlay || !closeBtn || !titleNode || !contentNode) return;
+
+  const openModal = (title, html) => {
+    titleNode.textContent = title;
+    contentNode.innerHTML = absolutizeHtml(html || "");
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    modal.classList.add("hidden");
+    document.body.style.overflow = "";
+  };
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const key = btn.getAttribute("data-service-key");
+      const title = btn.getAttribute("data-service-title") || btn.textContent.trim();
+      openModal(title, content[key] || "");
+    });
+  });
+
+  overlay.addEventListener("click", closeModal);
+  closeBtn.addEventListener("click", closeModal);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+  });
+}
+
 async function initDataDrivenContent() {
   try {
     const [content, products, news] = await Promise.all([
@@ -144,6 +182,7 @@ async function initDataDrivenContent() {
     renderRichHtmlBlocks(content);
     renderProducts(products);
     renderNews(news);
+    initServiceButtons(content);
   } catch (err) {
     console.error(err);
   }

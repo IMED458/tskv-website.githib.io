@@ -297,6 +297,42 @@ h1 { font-size: clamp(2rem, 4vw, 3rem); margin-top: 0.85rem; color: var(--primar
   cursor: pointer;
   color: var(--primary);
 }
+.service-modal-panel {
+  width: min(760px, 100%);
+}
+
+.service-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.service-btn {
+  text-align: left;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #fff 0%, #f9f5ee 100%);
+  border-radius: 16px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+.service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(33, 76, 61, 0.12);
+  border-color: #d6c7b1;
+}
+.service-btn-title {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+.service-btn-sub {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
 .split {
   display: grid;
@@ -403,6 +439,8 @@ label { font-size: 0.87rem; color: var(--muted); display: block; margin-bottom: 
   .gallery .g3,
   .gallery .g4,
   .gallery .g5 { grid-column: span 12; }
+
+  .service-actions { grid-template-columns: 1fr; }
 
   .site-nav {
     position: absolute;
