@@ -44,21 +44,31 @@ function renderProducts(products) {
   const grid = document.getElementById('products-grid');
   if (!grid) return;
 
+  const stripTags = (html) => String(html || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  const cleanName = (item) => {
+    const descText = stripTags(item.description_html || "");
+    if (descText.includes("დამზადებულია")) {
+      const left = descText.split("დამზადებულია")[0].trim();
+      if (left.length > 2 && left.length < 140) return left.replace(/[.:-]+$/, "").trim();
+    }
+    const title = String(item.title || "").replace(/\(ფასი.*?\)/g, "").trim();
+    const fromTitle = title.replace(/\s*\d.*?ლარი.*$/i, "").trim();
+    return fromTitle || title || "პროდუქტი";
+  };
+
   grid.innerHTML = products
-    .map((item) => {
-      const price = item.price_line || '';
-      const title = item.title || '';
-      const desc = absolutizeHtml(item.description_html || '');
-      const img = item.img_local || item.img || '';
-      const href = item.href || '#';
+    .map((item, idx) => {
+      const title = cleanName(item);
+      const img = item.img_local || item.img || "";
 
       return `
       <article class="card product-full">
         <img src="${img}" alt="${title.replace(/"/g, '&quot;')}" loading="lazy" />
         <div class="card-body">
           <h3>${title}</h3>
-          <div class="price-line"><strong>ფასი:</strong> ${price.replace(/^ფასი:\s*/,'')}</div>
-          <div class="rich-text"><strong>აღწერა:</strong> ${desc}</div>
+          <div class="meta">
+            <button class="btn btn-primary product-open-btn" type="button" data-product-index="${idx}">ვრცლად</button>
+          </div>
         </div>
       </article>`;
     })
@@ -66,6 +76,44 @@ function renderProducts(products) {
 
   const total = document.getElementById('product-total');
   if (total) total.textContent = String(products.length);
+
+  const modal = document.getElementById("product-modal");
+  const modalOverlay = document.getElementById("product-modal-overlay");
+  const modalClose = document.getElementById("product-modal-close");
+  const modalTitle = document.getElementById("product-modal-title");
+  const modalImage = document.getElementById("product-modal-image");
+  const modalPrice = document.getElementById("product-modal-price");
+  const modalDesc = document.getElementById("product-modal-description");
+
+  if (!modal || !modalOverlay || !modalClose || !modalTitle || !modalImage || !modalPrice || !modalDesc) return;
+
+  const openModal = (item) => {
+    modalTitle.textContent = cleanName(item);
+    modalImage.src = item.img_local || item.img || "";
+    modalImage.alt = cleanName(item);
+    modalPrice.textContent = (item.price_line || "").replace(/^ფასი:\s*/, "").trim();
+    modalDesc.innerHTML = absolutizeHtml(item.description_html || "");
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    modal.classList.add("hidden");
+    document.body.style.overflow = "";
+  };
+
+  grid.querySelectorAll(".product-open-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const idx = Number(btn.getAttribute("data-product-index"));
+      if (!Number.isNaN(idx) && products[idx]) openModal(products[idx]);
+    });
+  });
+
+  modalOverlay.addEventListener("click", closeModal);
+  modalClose.addEventListener("click", closeModal);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+  });
 }
 
 function renderNews(newsItems) {
