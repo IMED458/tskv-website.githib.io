@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width"/>
+	<title>ყველის სახეობები</title>
+	<link rel="SHORTCUT ICON" href="/" />
+	<script language="javascript" src="/templates/default/js/jquery/jquery-1.7.2.js"></script>
+	<script language="javascript" src="/templates/default/js/jquery/jquery-ui.js"></script>
+	<script language="javascript" src="/templates/default/js/main.js"></script>
+	<script language="javascript" src="/templates/default/js/users.js"></script>
+	<script language="javascript" src="/templates/default/js/menu.js"></script>
+	<script language="javascript" src="/templates/default/js/side_menu.js"></script>
+	<script language="javascript" src="/templates/default/js/geo.js"></script>
+	<script language="javascript" src="/templates/default/js/poll.js"></script>
+	<script language="javascript" src="/templates/default/js/scrollTo.js"></script>
+	<script language="javascript" src="/templates/default/js/slick/slick.js"></script>
+
+
+	<link href="/templates/default/css/ge.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/default.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/poll.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/users.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/menu.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/side_menu.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/slick/slick.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/mobile.css" rel="stylesheet" type="text/css" />
+	<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--[if lte IE 7]>
+<style type="text/css">
+html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+</style>
+<![endif]-->
+	<link href="/templates/default/js/fancybox-master/css/core.css" rel="stylesheet" type="text/css" />
+	<script language="javascript" src="/templates/default/js/fancybox-master/js/core.js"></script>
+	<script language="javascript" src="/templates/default/js/fancybox-master/js/guestures.js"></script>
+
+		<script type="text/javascript">
+	hs.graphicsDir = "http://tsiviskveli.ge/templates/default/js/gallery2/graphics/";
+	hs.align = "center";
+	hs.transitions = ["expand", "crossfade"];
+	hs.fadeInOut = true;
+	hs.outlineType = "glossy-dark";
+	hs.wrapperClassName = "dark";
+	hs.captionEval = "this.a.title";
+	hs.numberPosition = "caption";
+	hs.useBox = true;
+	hs.width = 800;
+	hs.height = 600;
+	hs.dimmingOpacity = 0.8;
+
+	// Add the slideshow providing the controlbar and the thumbstrip
+	hs.addSlideshow({
+		//slideshowGroup: "group1",
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		fixedControls: "fit",
+		overlayOptions: {
+			position: "bottom center",
+			opacity: .75,
+			hideOnMouseOut: true
+		},
+		thumbstrip: {
+			position: "above",
+			mode: "horizontal",
+			relativeTo: "expander"
+		}
+	});
+
+	// Make all images animate to the one visible thumbnail
+	var miniGalleryOptions1 = {
+		thumbnailId: "thumb1"
+	}
+	</script><script>
+$(function () {
+	var scroll_timer;
+	var displayed = false;
+	var $message = $('#up');
+	var $window = $(window);
+	var top = $(document.body).children(0).position().top;
+
+	/* react to scroll event on window */
+	$window.scroll(function () {
+		window.clearTimeout(scroll_timer);
+		scroll_timer = window.setTimeout(function () { // use a timer for performance
+			if($window.scrollTop() <= top) // hide if at the top of the page
+			{
+				displayed = false;
+				$message.fadeOut(500);
+			}
+			else if(displayed == false) // show if scrolling down
+			{
+				displayed = true;
+				$message.stop(true, true).fadeIn(500).click(function () { $message.fadeOut(500); });
+			}
+		}, 100);
+		});
+		$('#top-link').click(function(e) { 
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+			return false;
+	   });
+});
+</script>
+</head>
+<body class="not-front">
+<div id="dialog-overlay"></div>
+<div class="main">
+<input type="hidden" readonly="1" id="site_url" value="http://tsiviskveli.ge" />
+<input type="hidden" name="l" readonly="1" id="l" value="1" />
+<div id="up">
+	<a href="#top" id="top-link" class="fa fa-arrow-circle-up hidden-mobile"></a>
+</div>
+
+<div class="header">
+		<div class="clear"></div>
+	<div class="logo-mobile hidden-desctop"><p><img src="http://tsiviskveli.ge/files/uploads/tsiviskvelilogolight.png" alt="" width="115" height="116" /></p><div class="clear"></div></div>
+	<div class="clear"></div>
+	<div class="top-wrapper">
+		<div class="left">
+		<div class="banner logo"><p><img src="http://tsiviskveli.ge/files/uploads/tsiviskvelilogolight.png" alt="" width="115" height="116" /></p><div class="clear"></div></div>
+		<!--
+			<div class="social">
+				<a target="_blank" href="https://www.facebook.com/tsiviskveli/"><img src="/templates/default/images/social/f.png" /></a>															</div>
+			<div class="clear"></div>
+			
+			<div class="phone-box">
+				<img src="/templates/default/images/phone.png" />
+				<div class="phone">0 32 2 28 57 00</div>
+				<div class="title">ცხელი ხაზი</div>
+			</div>
+			-->
+		</div>	
+		<div class="right">
+			<div class="languages"><a class="active ge" title="ქართული" href="/kvelis-saxeobebi/page/2">GE</a><span class="line">|</span><a class="passive en" title="English" href="/en/kvelis-saxeobebi/page/2">EN</a><span class="line">|</span><a class="passive ru" title="русский" href="/ru/kvelis-saxeobebi/page/2">RU</a></div>
+			<div class="clear"></div>
+			<div><div id="top-menu" class="top-menu hidden-mobile">
+<div class="clear"></div>
+<ul><li class=""><a href="http://tsiviskveli.ge">მთავარი</a></li><li class=""><a href="/servisebi">სერვისები</a><ul><li class=""><a href="/servisebi/gidebistvis1">გიდებისთვის</a></li><li class=""><a href="/servisebi/maghaziebistvis">მაღაზიებისთვის</a></li><li class=""><a href="/servisebi/turistebistvis">ტურისტებისთვის</a></li></ul></li><li class="selected"><a href="/kvelis-saxeobebi">ყველის სახეობები</a></li><li class=""><a href="/chvens-shesaxeb">ჩვენს შესახებ</a></li><li class=""><a href="/dajavshna">დაჯავშნა</a></li><li class=""><a href="/kontaqti">კონტაქტი</a></li></ul></div></div>
+			<script language="javascript">
+			$(function() {
+				var menuSelected=0;
+				$('.show-menu').click(function() {
+					if(menuSelected == 0) {
+						$('.top-menu2>ul').slideDown(300);
+						$(this).removeClass('fa-bars');
+						$(this).addClass('fa-close');
+						menuSelected = 1;
+					} else {
+						$('.top-menu2>ul').slideUp(300);
+						$(this).removeClass('fa-close');
+						$(this).addClass('fa-bars');
+						menuSelected = 0;
+					}
+				});
+			});
+			</script>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+	<div id="cssmenu" class="cssmenu top-menu2">
+	<a href="javascript: void(0);" class="show-menu fa fa-bars"></a>
+	<div class="clear"></div>
+	<ul><li><a href="http://tsiviskveli.ge" data-id="1">მთავარი</a></li><li class="has-sub"><a href="/servisebi" data-id="50">სერვისები</a><ul><li><a href="/gidebistvis1" data-id="51">გიდებისთვის</a></li><li><a href="/maghaziebistvis" data-id="49">მაღაზიებისთვის</a></li><li><a href="/turistebistvis" data-id="47">ტურისტებისთვის</a></li></ul></li><li class="selected active"><a href="/kvelis-saxeobebi" data-id="5">ყველის სახეობები</a></li><li><a href="/petition" data-id="15">გამოცდილება</a></li><li><a href="/meniu-3" data-id="17">მომსახურეობა</a></li><li><a href="/autcion" data-id="18"> ხარისხი</a></li><li><a href="/ghonisdziebebi" data-id="46">ღონისძიებები</a></li><li><a href="/chvens-shesaxeb" data-id="53">ჩვენს შესახებ</a></li><li><a href="/dajavshna" data-id="45">დაჯავშნა</a></li><li><a href="/kontaqti" data-id="7">კონტაქტი</a></li><li><a href="/bolo-siaxleebi" data-id="43">ბოლო სიახლეები</a></li></ul>	</div>
+
+	<div style="position: relative; max-width: 1250px; width: 100%; margin: auto;">
+		<script language="javascript">
+$(function() {
+	$( '.show-search' ).click(function() {
+		$('.search').slideToggle('fast');
+		$('#search_word').focus();
+	});
+});
+</script>
+<div class="search-box">
+<div class="search">
+<form method="get" action="/ge/search.html">
+	<input type="text" name="search_word" class="search-word" value="" autocomplete="off" placeholder="საძიებო სიტყვა..." />
+	<button type="submit" class="fa fa-search" name=""></button>
+</form>
+<div class="clear"></div>
+</div>
+</div>		<div>
+
+<style>
+.image-description {
+	position: absolute;
+	left: 0; bottom: -1px;
+	z-index: 9;
+	width: 83%;
+	min-height: 50px;
+	overflow: hidden;
+	display: none;
+}
+.image-description .back {
+	position: absolute;
+	border-bottom: 105px solid rgba(0, 0, 0, 0.6);
+	border-right: 90px solid transparent;
+	width: 100%;
+	bottom: 0; right: 10px;
+	z-index: 1;
+}
+.image-description .text {
+	position: relative;
+	padding: 10px 70px 10px 20px;
+	font: normal 18px BPG Nino Mtavruli;
+	line-height: 30px;
+	color: #fff;
+	z-index: 2;
+}
+</style>
+
+<script language="javascript">
+$(document).ready(function(){
+	lastBlock = $("#guide .guide-inner:first");
+		var maxWidth;
+		var minWidth;
+	$("#guide a").hover( function(){
+		var pageWidth = $(document).width();
+		if(pageWidth < 960) {
+			minWidth = 60;
+			maxWidth = 200;
+		} else {
+			maxWidth = 335;
+			minWidth = 75;
+		}
+		$(lastBlock).animate({width: minWidth+"px"}, { queue:false, duration:400 });
+		$(this).find('.guide-inner').animate({width: maxWidth+"px"}, { queue:false, duration:400});
+		lastBlock = $(this).find('.guide-inner');
+	});
+});
+</script>
+
+<div style="max-width: 1150px; width: 100%; margin: 30px auto 0 auto;">
+	<div class="clear"></div>
+	<div class="slider rev_slider hidden-mobile" style="width: 100%; margin: 0 auto 0 auto;">
+					<div style="width: 100%; padding: 0; margin: 0; height: 420px; position: relative;">
+				<img width="1150px" src="/files/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg"  alt="" />
+				<div class="image-description">
+					<div class="back"></div>
+					<div class="text"></div>
+				</div>
+			</div>
+					<div style="width: 100%; padding: 0; margin: 0; height: 420px; position: relative;">
+				<img width="1150px" src="/files/images/9ac26d58521b041eb6fa2e45c0276436.jpg"  alt="" />
+				<div class="image-description">
+					<div class="back"></div>
+					<div class="text"></div>
+				</div>
+			</div>
+			</div>
+</div>
+
+
+<div class="clear"></div>
+<div class="clear"></div>
+
+<script language="javascript">
+$(document).ready(function() {
+    $(".rev_slider").slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+		rows: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+		prevArrow: '<div data-role="none" class="slick-prev2" aria-label="Previous" tabindex="0"></div>',
+		nextArrow: '<div data-role="none" class="slick-next2" aria-label="Next" tabindex="0"></div>'
+    });
+
+	$('.rev_slider').find('.slick-prev').addClass('fa');
+});
+</script>
+<p class="clear hidden-desctop">&nbsp;</p></div>
+	</div>
+	<div class="clear">&nbsp;</div>
+</div>
+<div class="content">
+	<div class="left">
+		<div class="clear"></div>
+		<div class="static-text">
+	</div>
+<div class="clear"></div>
+<style>
+.news2 {
+	width: 800px;
+	margin: 20px;
+	padding: 10px;
+	box-shadow: 0px 0px 5px #fff;
+	border-radius: 5px;
+	background-color: #d1d7da;
+	overflow: hidden;
+}
+.news2 .price {
+	margin-left: 410px;
+	font-size: 17px;
+	color: #ed3b3d;
+	padding: 5px;
+	background-color: rgba(0,31,52, 0.4);
+	box-shadow: 0px 0px 2px #001f34;
+	border-radius: 5px;
+	line-height: 20px;
+}
+.news2 .price span {
+	color: #fcfcfc;
+}
+.news2 .description {
+	margin-left: 410px;
+    background-color: rgba(0,31,52, 0.4);
+    box-shadow: 0px 0px 2px #001f34;
+	border-radius: 5px;
+	padding: 5px;
+	color: #fcfcfc;
+	font-size: 14px;
+}
+.news2 .description p {
+	margin: 0;
+	padding: 0;
+}
+.news2 .desc-title {
+	margin: 8px 0;
+	font-size: 16px;
+	color: #ed3b3d;
+}
+.news2 img {
+    width: 400px;
+    height: 245px;
+    float: left;
+	margin-right: 10px;
+    box-shadow: 0px 0px 2px #001f34;
+}
+</style>
+
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/22-1-kg--3670-lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_03/84e512d984c266da324fc2d71f4b9555.jpg"><img src="/files/news/2019_03/small2/84e512d984c266da324fc2d71f4b9555.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ-  36.70 ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 27.50 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p class="" msonormal=""><span><span>საფერავში</span></span><span> </span><span>დავარგებული</span> <span>სულგუნი</span> <span>დამზადებულია</span> <span>ძროხის</span> <span>პასტერიზებული</span> <span>რძისაგან</span><span>. </span><span>შემადგენლობა</span><span>: </span><span>ძროხის</span> <span>პასტერიზებული</span> <span>რძე</span><span>, </span><span>რძის</span> <span>შემადედებელი</span> <span>ფერმენტი</span><span>. </span><span>კვებითი</span> <span>ღირებულება</span><span> 100 </span><span>გრ</span> <span>პროდუქტში</span><span>: </span><span>სუფრის</span> <span>მარილის</span> <span>მასური</span> <span>წილი</span><span> -4,5 %, </span><span>ტენის</span> <span>მასური</span> <span>წილი</span><span> - 19,4%, </span><span>ცხიმის</span> <span>მასური</span> <span>წილი</span><span>- 45,0%- 47,0 %, </span><span>ცილის</span> <span>მასური</span> <span>წილი</span><span> 21,0%. </span><span>ენერგეტიკული</span> <span>ღირებულება</span><span>: </span><span>კკალ</span><span>/100 </span><span>გრ</span> <span>პროდუქტში</span><span>-275. </span><span>შენახვის</span> <span>პირობები</span><span>:  +5</span><span>◦ C</span><span>+10 </span><span>◦ C</span></p>
+<p class="" msonormal=""><span>შენახვის ვადა 3 თვე </span></p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/22-1-kg--3670-lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_03/84e512d984c266da324fc2d71f4b9555.jpg" alt="1 კგ-  36.70 ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/22-1-kg--3670-lari-fasi-mocemulia-27-kursit.html">1 კგ-  36.70 ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/22-1-kg--3670-lari-fasi-mocemulia-27-kursit.html"><p class="" msonormal=""><span><span>საფერავში</span></span><span> </span><span>დავარგებული</span> <span>სულგუნი</span> <span>დამზადებულია</span> <span>ძროხის</span> <span>პასტერიზებული</span> <span>რძისაგან</span><span>. </span><span>შემადგენლობა</span><span>: </span><span>ძროხის</span> <span>პასტერიზებული</span> <span>რძე</span><span>, </span><span>რძის</span> <span>შემადედებელი</span> <span>ფერმენტი</span><span>. </span><span>კვებითი</span> <span>ღირებულება</span><span> 100 </span><span>გრ</span> <span>პროდუქტში</span><span>: </span><span>სუფრის</span> <span>მარილის</span> <span>მასური</span> <span>წილი</span><span> -4,5 %, </span><span>ტენის</span> <span>მასური</span> <span>წილი</span><span> - 19,4%, </span><span>ცხიმის</span> <span>მასური</span> <span>წილი</span><span>- 45,0%- 47,0 %, </span><span>ცილის</span> <span>მასური</span> <span>წილი</span><span> 21,0%. </span><span>ენერგეტიკული</span> <span>ღირებულება</span><span>: </span><span>კკალ</span><span>/100 </span><span>გრ</span> <span>პროდუქტში</span><span>-275. </span><span>შენახვის</span> <span>პირობები</span><span>:  +5</span><span>◦ C</span><span>+10 </span><span>◦ C</span></p>
+<p class="" msonormal=""><span>შენახვის ვადა 3 თვე </span></p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/22-1-kg--3670-lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/21-1-kg-2915-lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_03/0897a5063082b1dd1f6058f55610962b.jpg"><img src="/files/news/2019_03/small2/0897a5063082b1dd1f6058f55610962b.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 29.15 ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 28.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p class="" msonormal=""><span><span>პრესილი ყველი მწარე წიწაკით</span></span><span> </span><span>დამზადებულია</span> <span>ძროხის</span> <span>პასტერიზებული</span> <span>რძისაგან</span><span>. </span><span>შემადგენლობა</span><span>: </span><span>ძროხის</span> <span>პასტერიზებული</span> <span>რძე</span><span>, ხმელი სანელებლებინ1 კგ- 60გრ, </span><span>რძის</span> <span>შემადედებელი</span> <span>ფერმენტი</span><span>. </span><span>კვებითი</span> <span>ღირებულება</span><span> 100 </span><span>გრ</span> <span>პროდუქტში</span><span>: </span><span>სუფრის</span> <span>მარილის</span> <span>მასური</span> <span>წილი</span><span> -3 %, </span><span>ტენის</span> <span>მასური</span> <span>წილი</span><span> - 12%, </span><span>ცხიმის</span> <span>მასური</span> <span>წილი</span><span>- 40,0%- 45,0 %, </span><span>ცილის</span> <span>მასური</span> <span>წილი</span><span> 20,2%. </span><span>ენერგეტიკული</span> <span>ღირებულება</span><span>: </span><span>კკალ</span><span>/100 </span><span>გრ</span> <span>პროდუქტში</span><span>-275. </span><span>შენახვის</span> <span>პირობები</span><span>:  +5</span><span geo="" kat="" lang="">◦C</span><span>+10 </span><span>◦ C<br /><br />შენახვის ვადა 3 თვე </span></p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/21-1-kg-2915-lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_03/0897a5063082b1dd1f6058f55610962b.jpg" alt="1 კგ- 29.15 ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/21-1-kg-2915-lari-fasi-mocemulia-27-kursit.html">1 კგ- 29.15 ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/21-1-kg-2915-lari-fasi-mocemulia-27-kursit.html"><p class="" msonormal=""><span><span>პრესილი ყველი მწარე წიწაკით</span></span><span> </span><span>დამზადებულია</span> <span>ძროხის</span> <span>პასტერიზებული</span> <span>რძისაგან</span><span>. </span><span>შემადგენლობა</span><span>: </span><span>ძროხის</span> <span>პასტერიზებული</span> <span>რძე</span><span>, ხმელი სანელებლებინ1 კგ- 60გრ, </span><span>რძის</span> <span>შემადედებელი</span> <span>ფერმენტი</span><span>. </span><span>კვებითი</span> <span>ღირებულება</span><span> 100 </span><span>გრ</span> <span>პროდუქტში</span><span>: </span><span>სუფრის</span> <span>მარილის</span> <span>მასური</span> <span>წილი</span><span> -3 %, </span><span>ტენის</span> <span>მასური</span> <span>წილი</span><span> - 12%, </span><span>ცხიმის</span> <span>მასური</span> <span>წილი</span><span>- 40,0%- 45,0 %, </span><span>ცილის</span> <span>მასური</span> <span>წილი</span><span> 20,2%. </span><span>ენერგეტიკული</span> <span>ღირებულება</span><span>: </span><span>კკალ</span><span>/100 </span><span>გრ</span> <span>პროდუქტში</span><span>-275. </span><span>შენახვის</span> <span>პირობები</span><span>:  +5</span><span geo="" kat="" lang="">◦C</span><span>+10 </span><span>◦ C<br /><br />შენახვის ვადა 3 თვე </span></p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/21-1-kg-2915-lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/20-1-kg-2915-lari--fasi-mocemulia-27-kursit.html" src="/files/news/2019_03/48d566d470a3a9d4a26da4bc7dfdb533.jpg"><img src="/files/news/2019_03/small2/48d566d470a3a9d4a26da4bc7dfdb533.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 29.15 ლარი  (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 28.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p>პრესილი ყველი –ქინძით, იმბირით, ზაფრანით, კურაგით, კაკაოთი, ორეგანოთი, კოწახურით, ტარხუნით, ცუკატებით, ნუშით,მიწის თხილით, პიტნით, შაშკვლავით, ქონდრით, ხმელი სანელებლებით, წიწაკით,როზმარინით, ფისტაშკებით) <br /><br />დამზადებულია ძროხის <span>პასტერიზებული</span> <span>რძისაგან</span><span>. </span><span>შემადგენლობა</span><span>: </span><span>ძროხის</span> <span>პასტერიზებული</span> <span>რძე</span><span>, </span><span>რძის</span> <span>შემადედებელი</span> <span>ფერმენტი</span><span>. </span><span>კვებითი</span> <span>ღირებულება</span><span> 100 </span><span>გრ</span> <span>პროდუქტში</span><span>: </span><span>სუფრის</span> <span>მარილის</span> <span>მასური</span> <span>წილი</span><span> -3 %, </span><span>ტენის</span> <span>მასური</span> <span>წილი</span><span> - 12%, </span><span>ცხიმის</span> <span>მასური</span> <span>წილი</span><span>- 40,0%- 45,0 %, </span><span>ცილის</span> <span>მასური</span> <span>წილი</span><span> 20,2%. </span><span>ენერგეტიკული</span> <span>ღირებულება</span><span>: </span><span>კკალ</span><span>/100 </span><span>გრ</span> <span>პროდუქტში</span><span>-275. </span><span>შენახვის</span> <span>პირობები</span><span>:  +5</span><span geo="" kat="" lang="">◦C</span><span>+10 </span><span>◦ C<br /><br />შენახვის ვადა 3 თვე </span></p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/20-1-kg-2915-lari--fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_03/48d566d470a3a9d4a26da4bc7dfdb533.jpg" alt="1 კგ- 29.15 ლარი  (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/20-1-kg-2915-lari--fasi-mocemulia-27-kursit.html">1 კგ- 29.15 ლარი  (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/20-1-kg-2915-lari--fasi-mocemulia-27-kursit.html"><p>პრესილი ყველი –ქინძით, იმბირით, ზაფრანით, კურაგით, კაკაოთი, ორეგანოთი, კოწახურით, ტარხუნით, ცუკატებით, ნუშით,მიწის თხილით, პიტნით, შაშკვლავით, ქონდრით, ხმელი სანელებლებით, წიწაკით,როზმარინით, ფისტაშკებით) <br /><br />დამზადებულია ძროხის <span>პასტერიზებული</span> <span>რძისაგან</span><span>. </span><span>შემადგენლობა</span><span>: </span><span>ძროხის</span> <span>პასტერიზებული</span> <span>რძე</span><span>, </span><span>რძის</span> <span>შემადედებელი</span> <span>ფერმენტი</span><span>. </span><span>კვებითი</span> <span>ღირებულება</span><span> 100 </span><span>გრ</span> <span>პროდუქტში</span><span>: </span><span>სუფრის</span> <span>მარილის</span> <span>მასური</span> <span>წილი</span><span> -3 %, </span><span>ტენის</span> <span>მასური</span> <span>წილი</span><span> - 12%, </span><span>ცხიმის</span> <span>მასური</span> <span>წილი</span><span>- 40,0%- 45,0 %, </span><span>ცილის</span> <span>მასური</span> <span>წილი</span><span> 20,2%. </span><span>ენერგეტიკული</span> <span>ღირებულება</span><span>: </span><span>კკალ</span><span>/100 </span><span>გრ</span> <span>პროდუქტში</span><span>-275. </span><span>შენახვის</span> <span>პირობები</span><span>:  +5</span><span geo="" kat="" lang="">◦C</span><span>+10 </span><span>◦ C<br /><br />შენახვის ვადა 3 თვე </span></p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/20-1-kg-2915-lari--fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/19-1kg34-lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_03/4c1e9ee235625501f72128c8dac2df4a.jpg"><img src="/files/news/2019_03/small2/4c1e9ee235625501f72128c8dac2df4a.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1კგ-34 ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 24.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p>შებოლილი ცხვრის გუდა (ყველი). შემადგენლობა: ცხვრის ნედლი რძე,რძის შემადგენელი ფერმენტი.კვებითი ღირებულება 100გრ პროდუქტში სუფრის მარილის მასური წილი %7.5 ცხიმის მას. წილი %32.5 ცილის მას. წილი % 26.0 ენერგეტიკული ღირებულება კკალ/100გრ პროდ 255. შენახვის პირობები +5 / +10<br />შენახვის ვადა 3 თვე </p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/19-1kg34-lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_03/4c1e9ee235625501f72128c8dac2df4a.jpg" alt="1კგ-34 ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/19-1kg34-lari-fasi-mocemulia-27-kursit.html">1კგ-34 ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/19-1kg34-lari-fasi-mocemulia-27-kursit.html"><p>შებოლილი ცხვრის გუდა (ყველი). შემადგენლობა: ცხვრის ნედლი რძე,რძის შემადგენელი ფერმენტი.კვებითი ღირებულება 100გრ პროდუქტში სუფრის მარილის მასური წილი %7.5 ცხიმის მას. წილი %32.5 ცილის მას. წილი % 26.0 ენერგეტიკული ღირებულება კკალ/100გრ პროდ 255. შენახვის პირობები +5 / +10<br />შენახვის ვადა 3 თვე </p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/19-1kg34-lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/18-1kg30-lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_11/ce0162772682403f8113f5a4cba6963b.jpg"><img src="/files/news/2019_11/small2/ce0162772682403f8113f5a4cba6963b.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1კგ-30 ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 22.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p>შებოლილი ძროხის ყველი. შემადგენლობა:ძროხის პასტერიზებული რძე, რძის შემადგენელი ფერმენტი. კვებითი ღირებულება 100გრ პროდუქტში: სუფრის მარილის მასური წილი %7.5, ტენის მასური წილი %22.4, ცხიმის მასური წილი %23.5, ცილის მასური წილი % 22.0, ენერგეტიკული ღირებულება : კკალ/100 გრ პროდუქტზე - 245, შენახვის პირობები +5 + 10.<br />შენახვის ვადა 3 თვე</p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/18-1kg30-lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_11/ce0162772682403f8113f5a4cba6963b.jpg" alt="1კგ-30 ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/18-1kg30-lari-fasi-mocemulia-27-kursit.html">1კგ-30 ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/18-1kg30-lari-fasi-mocemulia-27-kursit.html"><p>შებოლილი ძროხის ყველი. შემადგენლობა:ძროხის პასტერიზებული რძე, რძის შემადგენელი ფერმენტი. კვებითი ღირებულება 100გრ პროდუქტში: სუფრის მარილის მასური წილი %7.5, ტენის მასური წილი %22.4, ცხიმის მასური წილი %23.5, ცილის მასური წილი % 22.0, ენერგეტიკული ღირებულება : კკალ/100 გრ პროდუქტზე - 245, შენახვის პირობები +5 + 10.<br />შენახვის ვადა 3 თვე</p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/18-1kg30-lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/17-1-kg-18--lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_03/7160091663cd0cae33c2e1e7a3b248d1.jpg"><img src="/files/news/2019_03/small2/7160091663cd0cae33c2e1e7a3b248d1.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 18  ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 16.50 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p>სახაჭაპურე ყველი . შემადგენლობა ძროხის პასტერიზებული რძე, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში : სუფრის მარილის მასური წილი 3 %, ტენის მასური წილი 12 %, ცხიმის მასური წილი 40%-45 %, ცილის მასური წილი 20,2 %. ენერგეტიკული ღირებულება კკალ/100 გრამ პროდუქტში 275. შენახვის პირობები +5+10 C<br />შენახვის ვადა 1 თვე </p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/17-1-kg-18--lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_03/7160091663cd0cae33c2e1e7a3b248d1.jpg" alt="1 კგ- 18  ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/17-1-kg-18--lari-fasi-mocemulia-27-kursit.html">1 კგ- 18  ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/17-1-kg-18--lari-fasi-mocemulia-27-kursit.html"><p>სახაჭაპურე ყველი . შემადგენლობა ძროხის პასტერიზებული რძე, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში : სუფრის მარილის მასური წილი 3 %, ტენის მასური წილი 12 %, ცხიმის მასური წილი 40%-45 %, ცილის მასური წილი 20,2 %. ენერგეტიკული ღირებულება კკალ/100 გრამ პროდუქტში 275. შენახვის პირობები +5+10 C<br />შენახვის ვადა 1 თვე </p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/17-1-kg-18--lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/16-1-kg--2695-lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_11/791c4f2e0731c384ec9b14108bb48adc.jpg"><img src="/files/news/2019_11/small2/791c4f2e0731c384ec9b14108bb48adc.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ-  26.95 ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 23.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p>სკამორცა. შემადგენლობა:  ძროხის პასტერიზებული რძე, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში : სუფრის მარილის მასური წილი 7,6 %, ტენის მასური წილი 15,5 %, ცხიმის მასური წილი -43 %, ცილის მასური წილი 19 %. ენერგეტიკული ღირებულება კკალ/100 გრ პროდუქტზე-215. შენახვის პირობები +5+10 C</p>
+<p>შენახვის ვადა 1 თვე </p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/16-1-kg--2695-lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_11/791c4f2e0731c384ec9b14108bb48adc.jpg" alt="1 კგ-  26.95 ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/16-1-kg--2695-lari-fasi-mocemulia-27-kursit.html">1 კგ-  26.95 ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/16-1-kg--2695-lari-fasi-mocemulia-27-kursit.html"><p>სკამორცა. შემადგენლობა:  ძროხის პასტერიზებული რძე, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში : სუფრის მარილის მასური წილი 7,6 %, ტენის მასური წილი 15,5 %, ცხიმის მასური წილი -43 %, ცილის მასური წილი 19 %. ენერგეტიკული ღირებულება კკალ/100 გრ პროდუქტზე-215. შენახვის პირობები +5+10 C</p>
+<p>შენახვის ვადა 1 თვე </p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/16-1-kg--2695-lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/15-1-kg--3395-lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_11/6cb4d08a9cc18933e8febec55a168775.jpg"><img src="/files/news/2019_11/small2/6cb4d08a9cc18933e8febec55a168775.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ – 33.95 ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 26.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p>შებოლილი სკამორცა . შემადგენლობა: ძროხის ნედლი რძე, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში: სუფრის მარილის მასური წილი - 7 %, ტენის მასური წილი - 15. %, ცხიმის მასური წილი -46 %, ცილის მასური წილი -19 %. ენერგეტიკული ღირებულება : კკალ/100 გრ პროდუქტში 75. შენახვის პირობები : +5+10 C<br />შენახვის ვადა 3 თვე </p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/15-1-kg--3395-lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_11/6cb4d08a9cc18933e8febec55a168775.jpg" alt="1 კგ – 33.95 ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/15-1-kg--3395-lari-fasi-mocemulia-27-kursit.html">1 კგ – 33.95 ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/15-1-kg--3395-lari-fasi-mocemulia-27-kursit.html"><p>შებოლილი სკამორცა . შემადგენლობა: ძროხის ნედლი რძე, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში: სუფრის მარილის მასური წილი - 7 %, ტენის მასური წილი - 15. %, ცხიმის მასური წილი -46 %, ცილის მასური წილი -19 %. ენერგეტიკული ღირებულება : კკალ/100 გრ პროდუქტში 75. შენახვის პირობები : +5+10 C<br />შენახვის ვადა 3 თვე </p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/15-1-kg--3395-lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/14-1-kg-2215-lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_11/9f1b97acb252456b0668245a6c65292b.jpg"><img src="/files/news/2019_11/small2/9f1b97acb252456b0668245a6c65292b.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 22.15 ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 20.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p>სულგუნი ტრადიციული. შემადგენლობა: ძროხის პასტერიზებული რძე, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში: სუფრის მარილის მასური წილი 7,1 %, ტენის მასური წილი- 15,7 %, ცხიმის მასური წილი-45,0-47,0 %, ცილის მასური წილი - 18,9 %, ენერგეტიკული ღირებულება კკალ/100გრ პროდუქტზე-  275. შენახვის პირობები +5<span>◦C /</span>+10<span>◦C.<br />შენახვის ვადა 1 თვე </span></p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/14-1-kg-2215-lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_11/9f1b97acb252456b0668245a6c65292b.jpg" alt="1 კგ- 22.15 ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/14-1-kg-2215-lari-fasi-mocemulia-27-kursit.html">1 კგ- 22.15 ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/14-1-kg-2215-lari-fasi-mocemulia-27-kursit.html"><p>სულგუნი ტრადიციული. შემადგენლობა: ძროხის პასტერიზებული რძე, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში: სუფრის მარილის მასური წილი 7,1 %, ტენის მასური წილი- 15,7 %, ცხიმის მასური წილი-45,0-47,0 %, ცილის მასური წილი - 18,9 %, ენერგეტიკული ღირებულება კკალ/100გრ პროდუქტზე-  275. შენახვის პირობები +5<span>◦C /</span>+10<span>◦C.<br />შენახვის ვადა 1 თვე </span></p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/14-1-kg-2215-lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/13-1kg2770-lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_03/bdb7c781264bc05d3e52d518b16591bf.jpg"><img src="/files/news/2019_03/small2/bdb7c781264bc05d3e52d518b16591bf.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1კგ-27.70 ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 20.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p><span><strong>სულგუნი ტრადიციული პიტნით</strong> დამზადებულია ძროხის პასტერიზებული რძისაგან.<strong> შემადგენლობა:</strong> ძროხის პასტერიზებული რძე, პიტნა 1 კგ-ზე 50 გრ, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში: სუფრის მარილის მასური წილი 7,1%, ტენის მასური წილი 15,7%, ცხიმის მასური წილი 45,0-47,0%, ცილის მასური წილი 18,9%. <strong>ენერგეტიკული ღირებულება:</strong> კკალ/100 გრ პროდუქტში-275. <strong>შენახვის პირობები</strong>: </span><span> +5</span><span>◦ C/</span><span>+10 </span><span>◦ C<br />შენახვის ვადა 1 თვე </span></p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/13-1kg2770-lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_03/bdb7c781264bc05d3e52d518b16591bf.jpg" alt="1კგ-27.70 ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/13-1kg2770-lari-fasi-mocemulia-27-kursit.html">1კგ-27.70 ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/13-1kg2770-lari-fasi-mocemulia-27-kursit.html"><p><span><strong>სულგუნი ტრადიციული პიტნით</strong> დამზადებულია ძროხის პასტერიზებული რძისაგან.<strong> შემადგენლობა:</strong> ძროხის პასტერიზებული რძე, პიტნა 1 კგ-ზე 50 გრ, რძის შემადედებელი ფერმენტი. კვებითი ღირებულება 100 გრ პროდუქტში: სუფრის მარილის მასური წილი 7,1%, ტენის მასური წილი 15,7%, ცხიმის მასური წილი 45,0-47,0%, ცილის მასური წილი 18,9%. <strong>ენერგეტიკული ღირებულება:</strong> კკალ/100 გრ პროდუქტში-275. <strong>შენახვის პირობები</strong>: </span><span> +5</span><span>◦ C/</span><span>+10 </span><span>◦ C<br />შენახვის ვადა 1 თვე </span></p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/13-1kg2770-lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/kvelis-saxeobebi/12-1-kg-25-lari-fasi-mocemulia-27-kursit.html" src="/files/news/2019_11/503240617c850af6230462d97b985dd1.jpg"><img src="/files/news/2019_11/small2/503240617c850af6230462d97b985dd1.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 25 ლარი (ფასი მოცემულია 2.7$ კურსით)</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 20.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p>ძროხის გუდის ყველი. შემადგენლობა:ძროხის პასტერიზებული რძე, რძის შემადგენელი ფერმენტი. კვებითი ღირებულება 100გრ პროდუქტში სუფრის მარილის მას.წილი %7.5, ტენის მასური წილი %22.4, ცხიმის მას.წილი %23.5, ცილის მასური წილი % 22.0, ენერგეტიკული ღირებულება კკალ/100 გრ პროდ 245. შენახვის პირობები + 5◦ С + 10◦ С<br />შენახვის ვადა 3 თვე </p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/kvelis-saxeobebi/12-1-kg-25-lari-fasi-mocemulia-27-kursit.html"><img src="/files/news/2019_11/503240617c850af6230462d97b985dd1.jpg" alt="1 კგ- 25 ლარი (ფასი მოცემულია 2.7$ კურსით)"></a></div>
+		<div class="title"><a href="/kvelis-saxeobebi/12-1-kg-25-lari-fasi-mocemulia-27-kursit.html">1 კგ- 25 ლარი (ფასი მოცემულია 2.7$ კურსით)</a></div>
+		<div class="description"><a href="/kvelis-saxeobebi/12-1-kg-25-lari-fasi-mocemulia-27-kursit.html"><p>ძროხის გუდის ყველი. შემადგენლობა:ძროხის პასტერიზებული რძე, რძის შემადგენელი ფერმენტი. კვებითი ღირებულება 100გრ პროდუქტში სუფრის მარილის მას.წილი %7.5, ტენის მასური წილი %22.4, ცხიმის მას.წილი %23.5, ცილის მასური წილი % 22.0, ენერგეტიკული ღირებულება კკალ/100 გრ პროდ 245. შენახვის პირობები + 5◦ С + 10◦ С<br />შენახვის ვადა 3 თვე </p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/kvelis-saxeobebi/12-1-kg-25-lari-fasi-mocemulia-27-kursit.html">სრულად</a></div>-->
+	</div>
+<div align="center" class="pagination"><a id="1" href="/kvelis-saxeobebi/page/1">&lt;&lt;</a><a id="1" href="/kvelis-saxeobebi/page/1">&lt;</a><a id="1" href="/kvelis-saxeobebi/page/1">1</a><b>2</b><span>&gt;</span><span>&gt;&gt;</span></div>		<div class="clear">&nbsp;</div>
+	</div>
+	<div class="right">
+		<div class="clear"></div>
+		<div class="banner"></div>
+		<div class="clear"></div>
+
+
+		<div class="clear"></div>
+		
+				<iframe name="f174f73b0303c02" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:page Facebook Social Plugin" style="border: medium none; visibility: visible; max-width: 350px; width: 100%; height: 500px;" src="https://www.facebook.com/v2.9/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https://www.facebook.com/tsiviskveli/&amp;container_width=330&amp;hide_cover=false&amp;href=https://www.facebook.com/tsiviskveli/&amp;locale=ka_GE&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline" class="" frameborder="0"></iframe>
+		<div class="clear"></div>
+		<div class="banner"><p><img src="http://tsiviskveli.ge/files/uploads/frame.png" alt="" width="255" height="255" /></p><div class="clear"></div></div>
+		<div class="clear"></div>
+	</div>
+</div>
+<p class="clear">&nbsp;</p></div>
+<div class="clear">&nbsp;</div>
+<div class="footer">
+	&copy; 2026 tsiviskveli
+</div>
+</body>
+</html>

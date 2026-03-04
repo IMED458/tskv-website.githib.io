@@ -57,11 +57,8 @@ function renderProducts(products) {
         <img src="${img}" alt="${title.replace(/"/g, '&quot;')}" loading="lazy" />
         <div class="card-body">
           <h3>${title}</h3>
-          <div class="price-line">${price}</div>
-          <div class="rich-text">${desc}</div>
-          <div class="meta">
-            <a class="btn btn-outline" href="${href}" target="_blank" rel="noopener">წყაროს ნახვა</a>
-          </div>
+          <div class="price-line"><strong>ფასი:</strong> ${price.replace(/^ფასი:\s*/,'')}</div>
+          <div class="rich-text"><strong>აღწერა:</strong> ${desc}</div>
         </div>
       </article>`;
     })
