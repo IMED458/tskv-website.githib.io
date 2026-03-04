@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width"/>
+	<title>ჩვენს შესახებ</title>
+	<link rel="SHORTCUT ICON" href="/" />
+	<script language="javascript" src="/templates/default/js/jquery/jquery-1.7.2.js"></script>
+	<script language="javascript" src="/templates/default/js/jquery/jquery-ui.js"></script>
+	<script language="javascript" src="/templates/default/js/main.js"></script>
+	<script language="javascript" src="/templates/default/js/users.js"></script>
+	<script language="javascript" src="/templates/default/js/menu.js"></script>
+	<script language="javascript" src="/templates/default/js/side_menu.js"></script>
+	<script language="javascript" src="/templates/default/js/geo.js"></script>
+	<script language="javascript" src="/templates/default/js/poll.js"></script>
+	<script language="javascript" src="/templates/default/js/scrollTo.js"></script>
+	<script language="javascript" src="/templates/default/js/slick/slick.js"></script>
+
+
+	<link href="/templates/default/css/ge.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/default.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/poll.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/users.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/menu.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/side_menu.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/slick/slick.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/mobile.css" rel="stylesheet" type="text/css" />
+	<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--[if lte IE 7]>
+<style type="text/css">
+html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+</style>
+<![endif]-->
+	<link href="/templates/default/js/fancybox-master/css/core.css" rel="stylesheet" type="text/css" />
+	<script language="javascript" src="/templates/default/js/fancybox-master/js/core.js"></script>
+	<script language="javascript" src="/templates/default/js/fancybox-master/js/guestures.js"></script>
+
+			<script type="text/javascript">
+	hs.graphicsDir = "http://tsiviskveli.ge/templates/default/js/gallery2/graphics/";
+	hs.align = "center";
+	hs.transitions = ["expand", "crossfade"];
+	hs.fadeInOut = true;
+	hs.outlineType = "glossy-dark";
+	hs.wrapperClassName = "dark";
+	hs.captionEval = "this.a.title";
+	hs.numberPosition = "caption";
+	hs.useBox = true;
+	hs.width = 800;
+	hs.height = 600;
+	hs.dimmingOpacity = 0.8;
+
+	// Add the slideshow providing the controlbar and the thumbstrip
+	hs.addSlideshow({
+		//slideshowGroup: "group1",
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		fixedControls: "fit",
+		overlayOptions: {
+			position: "bottom center",
+			opacity: .75,
+			hideOnMouseOut: true
+		},
+		thumbstrip: {
+			position: "above",
+			mode: "horizontal",
+			relativeTo: "expander"
+		}
+	});
+
+	// Make all images animate to the one visible thumbnail
+	var miniGalleryOptions1 = {
+		thumbnailId: "thumb1"
+	}
+	</script><script>
+$(function () {
+	var scroll_timer;
+	var displayed = false;
+	var $message = $('#up');
+	var $window = $(window);
+	var top = $(document.body).children(0).position().top;
+
+	/* react to scroll event on window */
+	$window.scroll(function () {
+		window.clearTimeout(scroll_timer);
+		scroll_timer = window.setTimeout(function () { // use a timer for performance
+			if($window.scrollTop() <= top) // hide if at the top of the page
+			{
+				displayed = false;
+				$message.fadeOut(500);
+			}
+			else if(displayed == false) // show if scrolling down
+			{
+				displayed = true;
+				$message.stop(true, true).fadeIn(500).click(function () { $message.fadeOut(500); });
+			}
+		}, 100);
+		});
+		$('#top-link').click(function(e) { 
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+			return false;
+	   });
+});
+</script>
+</head>
+<body class="not-front">
+<div id="dialog-overlay"></div>
+<div class="main">
+<input type="hidden" readonly="1" id="site_url" value="http://tsiviskveli.ge" />
+<input type="hidden" name="l" readonly="1" id="l" value="1" />
+<div id="up">
+	<a href="#top" id="top-link" class="fa fa-arrow-circle-up hidden-mobile"></a>
+</div>
+
+<div class="header">
+		<div class="clear"></div>
+	<div class="logo-mobile hidden-desctop"><p><img src="http://tsiviskveli.ge/files/uploads/tsiviskvelilogolight.png" alt="" width="115" height="116" /></p><div class="clear"></div></div>
+	<div class="clear"></div>
+	<div class="top-wrapper">
+		<div class="left">
+		<div class="banner logo"><p><img src="http://tsiviskveli.ge/files/uploads/tsiviskvelilogolight.png" alt="" width="115" height="116" /></p><div class="clear"></div></div>
+		<!--
+			<div class="social">
+				<a target="_blank" href="https://www.facebook.com/tsiviskveli/"><img src="/templates/default/images/social/f.png" /></a>															</div>
+			<div class="clear"></div>
+			
+			<div class="phone-box">
+				<img src="/templates/default/images/phone.png" />
+				<div class="phone">0 32 2 28 57 00</div>
+				<div class="title">ცხელი ხაზი</div>
+			</div>
+			-->
+		</div>	
+		<div class="right">
+			<div class="languages"><a class="active ge" title="ქართული" href="/chvens-shesaxeb">GE</a><span class="line">|</span><a class="passive en" title="English" href="/en/chvens-shesaxeb">EN</a><span class="line">|</span><a class="passive ru" title="русский" href="/ru/chvens-shesaxeb">RU</a></div>
+			<div class="clear"></div>
+			<div><div id="top-menu" class="top-menu hidden-mobile">
+<div class="clear"></div>
+<ul><li class=""><a href="http://tsiviskveli.ge">მთავარი</a></li><li class=""><a href="/servisebi">სერვისები</a><ul><li class=""><a href="/servisebi/gidebistvis1">გიდებისთვის</a></li><li class=""><a href="/servisebi/maghaziebistvis">მაღაზიებისთვის</a></li><li class=""><a href="/servisebi/turistebistvis">ტურისტებისთვის</a></li></ul></li><li class=""><a href="/kvelis-saxeobebi">ყველის სახეობები</a></li><li class="selected"><a href="/chvens-shesaxeb">ჩვენს შესახებ</a></li><li class=""><a href="/dajavshna">დაჯავშნა</a></li><li class=""><a href="/kontaqti">კონტაქტი</a></li></ul></div></div>
+			<script language="javascript">
+			$(function() {
+				var menuSelected=0;
+				$('.show-menu').click(function() {
+					if(menuSelected == 0) {
+						$('.top-menu2>ul').slideDown(300);
+						$(this).removeClass('fa-bars');
+						$(this).addClass('fa-close');
+						menuSelected = 1;
+					} else {
+						$('.top-menu2>ul').slideUp(300);
+						$(this).removeClass('fa-close');
+						$(this).addClass('fa-bars');
+						menuSelected = 0;
+					}
+				});
+			});
+			</script>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+	<div id="cssmenu" class="cssmenu top-menu2">
+	<a href="javascript: void(0);" class="show-menu fa fa-bars"></a>
+	<div class="clear"></div>
+	<ul><li><a href="http://tsiviskveli.ge" data-id="1">მთავარი</a></li><li class="has-sub"><a href="/servisebi" data-id="50">სერვისები</a><ul><li><a href="/gidebistvis1" data-id="51">გიდებისთვის</a></li><li><a href="/maghaziebistvis" data-id="49">მაღაზიებისთვის</a></li><li><a href="/turistebistvis" data-id="47">ტურისტებისთვის</a></li></ul></li><li><a href="/kvelis-saxeobebi" data-id="5">ყველის სახეობები</a></li><li><a href="/petition" data-id="15">გამოცდილება</a></li><li><a href="/meniu-3" data-id="17">მომსახურეობა</a></li><li><a href="/autcion" data-id="18"> ხარისხი</a></li><li><a href="/ghonisdziebebi" data-id="46">ღონისძიებები</a></li><li class="selected active"><a href="/chvens-shesaxeb" data-id="53">ჩვენს შესახებ</a></li><li><a href="/dajavshna" data-id="45">დაჯავშნა</a></li><li><a href="/kontaqti" data-id="7">კონტაქტი</a></li><li><a href="/bolo-siaxleebi" data-id="43">ბოლო სიახლეები</a></li></ul>	</div>
+
+	<div style="position: relative; max-width: 1250px; width: 100%; margin: auto;">
+		<script language="javascript">
+$(function() {
+	$( '.show-search' ).click(function() {
+		$('.search').slideToggle('fast');
+		$('#search_word').focus();
+	});
+});
+</script>
+<div class="search-box">
+<div class="search">
+<form method="get" action="/ge/search.html">
+	<input type="text" name="search_word" class="search-word" value="" autocomplete="off" placeholder="საძიებო სიტყვა..." />
+	<button type="submit" class="fa fa-search" name=""></button>
+</form>
+<div class="clear"></div>
+</div>
+</div>		<div>
+
+<style>
+.image-description {
+	position: absolute;
+	left: 0; bottom: -1px;
+	z-index: 9;
+	width: 83%;
+	min-height: 50px;
+	overflow: hidden;
+	display: none;
+}
+.image-description .back {
+	position: absolute;
+	border-bottom: 105px solid rgba(0, 0, 0, 0.6);
+	border-right: 90px solid transparent;
+	width: 100%;
+	bottom: 0; right: 10px;
+	z-index: 1;
+}
+.image-description .text {
+	position: relative;
+	padding: 10px 70px 10px 20px;
+	font: normal 18px BPG Nino Mtavruli;
+	line-height: 30px;
+	color: #fff;
+	z-index: 2;
+}
+</style>
+
+<script language="javascript">
+$(document).ready(function(){
+	lastBlock = $("#guide .guide-inner:first");
+		var maxWidth;
+		var minWidth;
+	$("#guide a").hover( function(){
+		var pageWidth = $(document).width();
+		if(pageWidth < 960) {
+			minWidth = 60;
+			maxWidth = 200;
+		} else {
+			maxWidth = 335;
+			minWidth = 75;
+		}
+		$(lastBlock).animate({width: minWidth+"px"}, { queue:false, duration:400 });
+		$(this).find('.guide-inner').animate({width: maxWidth+"px"}, { queue:false, duration:400});
+		lastBlock = $(this).find('.guide-inner');
+	});
+});
+</script>
+
+<div style="max-width: 1150px; width: 100%; margin: 30px auto 0 auto;">
+	<div class="clear"></div>
+	<div class="slider rev_slider hidden-mobile" style="width: 100%; margin: 0 auto 0 auto;">
+					<div style="width: 100%; padding: 0; margin: 0; height: 420px; position: relative;">
+				<img width="1150px" src="/files/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg"  alt="" />
+				<div class="image-description">
+					<div class="back"></div>
+					<div class="text"></div>
+				</div>
+			</div>
+					<div style="width: 100%; padding: 0; margin: 0; height: 420px; position: relative;">
+				<img width="1150px" src="/files/images/9ac26d58521b041eb6fa2e45c0276436.jpg"  alt="" />
+				<div class="image-description">
+					<div class="back"></div>
+					<div class="text"></div>
+				</div>
+			</div>
+			</div>
+</div>
+
+
+<div class="clear"></div>
+<div class="clear"></div>
+
+<script language="javascript">
+$(document).ready(function() {
+    $(".rev_slider").slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+		rows: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+		prevArrow: '<div data-role="none" class="slick-prev2" aria-label="Previous" tabindex="0"></div>',
+		nextArrow: '<div data-role="none" class="slick-next2" aria-label="Next" tabindex="0"></div>'
+    });
+
+	$('.rev_slider').find('.slick-prev').addClass('fa');
+});
+</script>
+<p class="clear hidden-desctop">&nbsp;</p></div>
+	</div>
+	<div class="clear">&nbsp;</div>
+</div>
+<div class="content">
+	<div class="left">
+		<div class="clear"></div>
+		<div class="static-text">
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<h2>ჩვენს შესახებ</h2>
+<p></p>
+<section id="ebaut">საწარმო „ ცივის ყველი“ დაარსდა 2008 წელს თელავის სოფ. კურდღელაურში. საწარმო მუშაობს როგორც ძროხის, ასევე კამეჩის რძეზე. შესაბამისად გთავაზობთ ძროხის რძისა და კამეჩის რძის ყველსა და სულგუნს. აქ ძირითადად იწარმოება სხვადასხვა სახის შებოლილი სულგუნი, ძველ ქართულ ტრადიციებზე დამზადებული ყველის სახეობები, აგრეთვე შემოგთავაზებთ მრავალფეროვან ასორტიმენტს და იტალიური ტექნოლოგიით დამზადებულ ქართულ „სულგუნელას“ ( მოცარელას). საწარმოში დასაქმებულია 25 ზე მეტი თანამშრომელი, უმეტესი მათგანი არის სოფელ კურდღელაურის მაცხოვრებელი, ანუ ადგილობრივი მკვიდრი. საწარმო გთავაზობთ უშუალოდ მიიღოთ მონაწილეობა პროდუქციის დამზადებაში. ვიღებთ შეკვეთებს კულტურული ღონისძიების მოწყობაში. ჩვენ გვაქვს ტურისტების მომსახურეობის გამოცდილება, რომელიც ითვალისწინებს ყველის დეგუსტაციას და ყველის კეთების პროცესში მონაწილეობის მიღებას. მონაწილეობას ვიღებთ გამოფენებში, საქველმოქმედო ღონისძიებაში, რომელსაც საშობაოდ ატარებენ სხვადასხვა საელჩოები საქართველოში. მიღებული გვაქვს ჯილდოები, სერტიფიკატები და მადლობის წერილები. აქტიურად ვესწრებით სახელმწიფოს მიერ შეთავაზებულ ტრენინგებსა და შეხვედრებს, რაც თანამშრომელთა კვალიფიკაციის ზრდას უწყობს ხელს.აღსანიშნავია,რომ ა.წ 5 მაისს სოფლის მეურნეობის მინისტრმა ბ-მა ლევან დავითაშვილმა საწარმოს ხარისხის ნიშანი გადასცა,რაც ნიშნავს,რომ ''ცივის ყველის'' პროდუქცია აღიარებულია სოფლის მეურნეობის სამინისტროს მიერ.</section>
+<p><br /><br /></p>
+<h3>მაღაზიები რომლებიც ჩვენთან თანამშრომლობენ</h3>
+<p></p>
+<section id="magazin">
+<div><span style="color: #ff0000;"><b style="margin-left: 25px;">კარფური : </b></span> <strong>თბილისი, თვალჭრელიძის 2</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">მარკეტი აქსისი</span> : </b> <strong>თბილისი, ცინცაძის 12</strong></div>
+<div><span style="color: #ff0000;"><b style="margin-left: 25px;">კარფური : </b></span> <strong>თბილისი, ნავთლუხის 8ა</strong></div>
+<div><span style="color: #ff0000;"><b style="margin-left: 25px;">კარფური : </b></span> <strong>თბილისი, ვეკუას 3</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">კარფური</span> : </b> <strong>თბილისი, ხიზაბაურის 1</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">კარფური</span> : </b> <strong>თბილისი, დადიანის 7</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">არისტეუსი</span> :</b> <strong>თბილისი, პუშკინის 19</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">ჩიზმასტერი</span> : </b> <strong>თბილისი,ჭავჭავაძის 50</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">კარფური</span> : </b> <strong>თბილისი,დიღმის სასწავლო  საცდელი მეურნეობის ტერიტორია</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">კარფური</span> : </b> <strong>თბილისი, ჭავჭავაძის 37</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">კარფური</span> : </b> <strong>თბილისი, ცინცაძის 37</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">კარფური</span> :</b><span style="color: #cc99ff;"><span style="color: #ff0000;"> </span></span><strong>თბილისი, ნუცუბიძის 129</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">კარფური</span> :</b> <strong>თბილისი,არაყიშვილის 3 </strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">კარფური</span> : </b> <strong>ბათუმი, აბუსერიძის 22</strong></div>
+<div><b style="color: #ed3b3d; margin-left: 25px;"><span style="color: #ff0000;">მეიდან შეითან ბაზარი</span> : </b> <strong>თბილისი, კოტე აფხაზის 10</strong><br />  <span style="color: #800000;"> <span style="color: #ff99cc;"><strong> <span style="color: #ff0000;"> ქართული კალათა</span></strong> </span></span><span style="color: #993300;">:</span> <strong>კოტე აფხაზის 33</strong><br />     <strong><span style="color: #ff0000;">დუტიფრი</span> </strong>: <strong>კაიროს 4 </strong><br />     <span style="color: #ff0000;"><strong>კარფური : </strong> <span style="color: #000000;"><strong>რუსთავი, მეგობრობის 23 </strong></span></span><br /><br /></div>
+</section>
+<p><br /><br /></p>
+<hr />
+<p></p>
+<p> </p>
+<h3 class="" msonormal="" justify="" 34="" style="text-align: center;"><span style="font-size: 18pt;">საწარმოს მიღწევები</span></h3>
+<h3 class="" msonormal="" justify="" 34=""><span style="font-size: 16.38px;">საწარმო შეიქმნა 2008 წელს. თავდაპირველად ის საოჯახო საწარმო იყო, რადგან მხოლოდ ოჯახის წევრები მუშაობდნენ. საწარმოში მხოლოდ ერთი სახეობის ყველი იწარმოებოდა.  ამ ეტაპზე  ვაწარმოებთ 11 სახეობის 70 ნაირსახეობის ყველს, სულგუნს, ნადუღს, ხაჭოს, კარაქს. ჩვენი საწარმოს პროდუქცია იყიდება არა მხოლოდ საქართველოში, ის ექსპორტის სახით გადის საზღვრებს გარეთაც. </span></h3>
+<p><span 8pt="" line-height:="" 115="" font-family:="" sylfaen="" serif="" background-image:="" initial="" background-position:="" background-size:="" background-repeat:="" background-attachment:="" background-origin:="" background-clip:="" 34="" geo="" kat="" lang=""> </span></p></div>
+<div class="photo-gallery highslide-gallery" style="width: 750px;">
+		<div class="picture"><a href="/files/menu_gallery/2021_07/unnamed.png" data-fancybox="images"><img src="/files/menu_gallery/2021_07/small/unnamed.png" border="0" /></a></div>
+		<div class="picture"><a href="/files/menu_gallery/2021_07/.png" data-fancybox="images"><img src="/files/menu_gallery/2021_07/small/.png" border="0" /></a></div>
+</div>
+<div class="clear">&nbsp;</div>
+<div class="back"><a href="javascript: history.back();">უკან</a></div>		<div class="clear">&nbsp;</div>
+	</div>
+	<div class="right">
+		<div class="clear"></div>
+		<div class="banner"></div>
+		<div class="clear"></div>
+
+
+		<div class="clear"></div>
+		
+				<iframe name="f174f73b0303c02" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:page Facebook Social Plugin" style="border: medium none; visibility: visible; max-width: 350px; width: 100%; height: 500px;" src="https://www.facebook.com/v2.9/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https://www.facebook.com/tsiviskveli/&amp;container_width=330&amp;hide_cover=false&amp;href=https://www.facebook.com/tsiviskveli/&amp;locale=ka_GE&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline" class="" frameborder="0"></iframe>
+		<div class="clear"></div>
+		<div class="banner"><p><img src="http://tsiviskveli.ge/files/uploads/frame.png" alt="" width="255" height="255" /></p><div class="clear"></div></div>
+		<div class="clear"></div>
+	</div>
+</div>
+<p class="clear">&nbsp;</p></div>
+<div class="clear">&nbsp;</div>
+<div class="footer">
+	&copy; 2026 tsiviskveli
+</div>
+</body>
+</html>
