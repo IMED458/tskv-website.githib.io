@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width"/>
+	<title>ბოლო სიახლეები</title>
+	<link rel="SHORTCUT ICON" href="/" />
+	<script language="javascript" src="/templates/default/js/jquery/jquery-1.7.2.js"></script>
+	<script language="javascript" src="/templates/default/js/jquery/jquery-ui.js"></script>
+	<script language="javascript" src="/templates/default/js/main.js"></script>
+	<script language="javascript" src="/templates/default/js/users.js"></script>
+	<script language="javascript" src="/templates/default/js/menu.js"></script>
+	<script language="javascript" src="/templates/default/js/side_menu.js"></script>
+	<script language="javascript" src="/templates/default/js/geo.js"></script>
+	<script language="javascript" src="/templates/default/js/poll.js"></script>
+	<script language="javascript" src="/templates/default/js/scrollTo.js"></script>
+	<script language="javascript" src="/templates/default/js/slick/slick.js"></script>
+
+
+	<link href="/templates/default/css/ge.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/default.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/poll.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/users.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/menu.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/side_menu.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/slick/slick.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/default/css/mobile.css" rel="stylesheet" type="text/css" />
+	<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--[if lte IE 7]>
+<style type="text/css">
+html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+</style>
+<![endif]-->
+	<link href="/templates/default/js/fancybox-master/css/core.css" rel="stylesheet" type="text/css" />
+	<script language="javascript" src="/templates/default/js/fancybox-master/js/core.js"></script>
+	<script language="javascript" src="/templates/default/js/fancybox-master/js/guestures.js"></script>
+
+		<script type="text/javascript">
+	hs.graphicsDir = "http://tsiviskveli.ge/templates/default/js/gallery2/graphics/";
+	hs.align = "center";
+	hs.transitions = ["expand", "crossfade"];
+	hs.fadeInOut = true;
+	hs.outlineType = "glossy-dark";
+	hs.wrapperClassName = "dark";
+	hs.captionEval = "this.a.title";
+	hs.numberPosition = "caption";
+	hs.useBox = true;
+	hs.width = 800;
+	hs.height = 600;
+	hs.dimmingOpacity = 0.8;
+
+	// Add the slideshow providing the controlbar and the thumbstrip
+	hs.addSlideshow({
+		//slideshowGroup: "group1",
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		fixedControls: "fit",
+		overlayOptions: {
+			position: "bottom center",
+			opacity: .75,
+			hideOnMouseOut: true
+		},
+		thumbstrip: {
+			position: "above",
+			mode: "horizontal",
+			relativeTo: "expander"
+		}
+	});
+
+	// Make all images animate to the one visible thumbnail
+	var miniGalleryOptions1 = {
+		thumbnailId: "thumb1"
+	}
+	</script><script>
+$(function () {
+	var scroll_timer;
+	var displayed = false;
+	var $message = $('#up');
+	var $window = $(window);
+	var top = $(document.body).children(0).position().top;
+
+	/* react to scroll event on window */
+	$window.scroll(function () {
+		window.clearTimeout(scroll_timer);
+		scroll_timer = window.setTimeout(function () { // use a timer for performance
+			if($window.scrollTop() <= top) // hide if at the top of the page
+			{
+				displayed = false;
+				$message.fadeOut(500);
+			}
+			else if(displayed == false) // show if scrolling down
+			{
+				displayed = true;
+				$message.stop(true, true).fadeIn(500).click(function () { $message.fadeOut(500); });
+			}
+		}, 100);
+		});
+		$('#top-link').click(function(e) { 
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+			return false;
+	   });
+});
+</script>
+</head>
+<body class="not-front">
+<div id="dialog-overlay"></div>
+<div class="main">
+<input type="hidden" readonly="1" id="site_url" value="http://tsiviskveli.ge" />
+<input type="hidden" name="l" readonly="1" id="l" value="1" />
+<div id="up">
+	<a href="#top" id="top-link" class="fa fa-arrow-circle-up hidden-mobile"></a>
+</div>
+
+<div class="header">
+		<div class="clear"></div>
+	<div class="logo-mobile hidden-desctop"><p><img src="http://tsiviskveli.ge/files/uploads/tsiviskvelilogolight.png" alt="" width="115" height="116" /></p><div class="clear"></div></div>
+	<div class="clear"></div>
+	<div class="top-wrapper">
+		<div class="left">
+		<div class="banner logo"><p><img src="http://tsiviskveli.ge/files/uploads/tsiviskvelilogolight.png" alt="" width="115" height="116" /></p><div class="clear"></div></div>
+		<!--
+			<div class="social">
+				<a target="_blank" href="https://www.facebook.com/tsiviskveli/"><img src="/templates/default/images/social/f.png" /></a>															</div>
+			<div class="clear"></div>
+			
+			<div class="phone-box">
+				<img src="/templates/default/images/phone.png" />
+				<div class="phone">0 32 2 28 57 00</div>
+				<div class="title">ცხელი ხაზი</div>
+			</div>
+			-->
+		</div>	
+		<div class="right">
+			<div class="languages"><a class="active ge" title="ქართული" href="/bolo-siaxleebi">GE</a><span class="line">|</span><a class="passive en" title="English" href="/en/bolo-siaxleebi">EN</a><span class="line">|</span><a class="passive ru" title="русский" href="/ru/bolo-siaxleebi">RU</a></div>
+			<div class="clear"></div>
+			<div><div id="top-menu" class="top-menu hidden-mobile">
+<div class="clear"></div>
+<ul><li class=""><a href="http://tsiviskveli.ge">მთავარი</a></li><li class=""><a href="/servisebi">სერვისები</a><ul><li class=""><a href="/servisebi/gidebistvis1">გიდებისთვის</a></li><li class=""><a href="/servisebi/maghaziebistvis">მაღაზიებისთვის</a></li><li class=""><a href="/servisebi/turistebistvis">ტურისტებისთვის</a></li></ul></li><li class=""><a href="/kvelis-saxeobebi">ყველის სახეობები</a></li><li class=""><a href="/chvens-shesaxeb">ჩვენს შესახებ</a></li><li class=""><a href="/dajavshna">დაჯავშნა</a></li><li class=""><a href="/kontaqti">კონტაქტი</a></li></ul></div></div>
+			<script language="javascript">
+			$(function() {
+				var menuSelected=0;
+				$('.show-menu').click(function() {
+					if(menuSelected == 0) {
+						$('.top-menu2>ul').slideDown(300);
+						$(this).removeClass('fa-bars');
+						$(this).addClass('fa-close');
+						menuSelected = 1;
+					} else {
+						$('.top-menu2>ul').slideUp(300);
+						$(this).removeClass('fa-close');
+						$(this).addClass('fa-bars');
+						menuSelected = 0;
+					}
+				});
+			});
+			</script>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+	<div id="cssmenu" class="cssmenu top-menu2">
+	<a href="javascript: void(0);" class="show-menu fa fa-bars"></a>
+	<div class="clear"></div>
+	<ul><li><a href="http://tsiviskveli.ge" data-id="1">მთავარი</a></li><li class="has-sub"><a href="/servisebi" data-id="50">სერვისები</a><ul><li><a href="/gidebistvis1" data-id="51">გიდებისთვის</a></li><li><a href="/maghaziebistvis" data-id="49">მაღაზიებისთვის</a></li><li><a href="/turistebistvis" data-id="47">ტურისტებისთვის</a></li></ul></li><li><a href="/kvelis-saxeobebi" data-id="5">ყველის სახეობები</a></li><li><a href="/petition" data-id="15">გამოცდილება</a></li><li><a href="/meniu-3" data-id="17">მომსახურეობა</a></li><li><a href="/autcion" data-id="18"> ხარისხი</a></li><li><a href="/ghonisdziebebi" data-id="46">ღონისძიებები</a></li><li><a href="/chvens-shesaxeb" data-id="53">ჩვენს შესახებ</a></li><li><a href="/dajavshna" data-id="45">დაჯავშნა</a></li><li><a href="/kontaqti" data-id="7">კონტაქტი</a></li><li class="selected active"><a href="/bolo-siaxleebi" data-id="43">ბოლო სიახლეები</a></li></ul>	</div>
+
+	<div style="position: relative; max-width: 1250px; width: 100%; margin: auto;">
+		<script language="javascript">
+$(function() {
+	$( '.show-search' ).click(function() {
+		$('.search').slideToggle('fast');
+		$('#search_word').focus();
+	});
+});
+</script>
+<div class="search-box">
+<div class="search">
+<form method="get" action="/ge/search.html">
+	<input type="text" name="search_word" class="search-word" value="" autocomplete="off" placeholder="საძიებო სიტყვა..." />
+	<button type="submit" class="fa fa-search" name=""></button>
+</form>
+<div class="clear"></div>
+</div>
+</div>		<div>
+
+<style>
+.image-description {
+	position: absolute;
+	left: 0; bottom: -1px;
+	z-index: 9;
+	width: 83%;
+	min-height: 50px;
+	overflow: hidden;
+	display: none;
+}
+.image-description .back {
+	position: absolute;
+	border-bottom: 105px solid rgba(0, 0, 0, 0.6);
+	border-right: 90px solid transparent;
+	width: 100%;
+	bottom: 0; right: 10px;
+	z-index: 1;
+}
+.image-description .text {
+	position: relative;
+	padding: 10px 70px 10px 20px;
+	font: normal 18px BPG Nino Mtavruli;
+	line-height: 30px;
+	color: #fff;
+	z-index: 2;
+}
+</style>
+
+<script language="javascript">
+$(document).ready(function(){
+	lastBlock = $("#guide .guide-inner:first");
+		var maxWidth;
+		var minWidth;
+	$("#guide a").hover( function(){
+		var pageWidth = $(document).width();
+		if(pageWidth < 960) {
+			minWidth = 60;
+			maxWidth = 200;
+		} else {
+			maxWidth = 335;
+			minWidth = 75;
+		}
+		$(lastBlock).animate({width: minWidth+"px"}, { queue:false, duration:400 });
+		$(this).find('.guide-inner').animate({width: maxWidth+"px"}, { queue:false, duration:400});
+		lastBlock = $(this).find('.guide-inner');
+	});
+});
+</script>
+
+<div style="max-width: 1150px; width: 100%; margin: 30px auto 0 auto;">
+	<div class="clear"></div>
+	<div class="slider rev_slider hidden-mobile" style="width: 100%; margin: 0 auto 0 auto;">
+					<div style="width: 100%; padding: 0; margin: 0; height: 420px; position: relative;">
+				<img width="1150px" src="/files/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg"  alt="" />
+				<div class="image-description">
+					<div class="back"></div>
+					<div class="text"></div>
+				</div>
+			</div>
+					<div style="width: 100%; padding: 0; margin: 0; height: 420px; position: relative;">
+				<img width="1150px" src="/files/images/9ac26d58521b041eb6fa2e45c0276436.jpg"  alt="" />
+				<div class="image-description">
+					<div class="back"></div>
+					<div class="text"></div>
+				</div>
+			</div>
+			</div>
+</div>
+
+
+<div class="clear"></div>
+<div class="clear"></div>
+
+<script language="javascript">
+$(document).ready(function() {
+    $(".rev_slider").slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+		rows: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+		prevArrow: '<div data-role="none" class="slick-prev2" aria-label="Previous" tabindex="0"></div>',
+		nextArrow: '<div data-role="none" class="slick-next2" aria-label="Next" tabindex="0"></div>'
+    });
+
+	$('.rev_slider').find('.slick-prev').addClass('fa');
+});
+</script>
+<p class="clear hidden-desctop">&nbsp;</p></div>
+	</div>
+	<div class="clear">&nbsp;</div>
+</div>
+<div class="content">
+	<div class="left">
+		<div class="clear"></div>
+		<div class="static-text">
+	<p>დღეს საწარმოს სტუმრობდა ტურსიტთა მორიგი ჯგუფი . </p></div>
+<div class="clear"></div>
+<style>
+.news2 {
+	width: 800px;
+	margin: 20px;
+	padding: 10px;
+	box-shadow: 0px 0px 5px #fff;
+	border-radius: 5px;
+	background-color: #d1d7da;
+	overflow: hidden;
+}
+.news2 .price {
+	margin-left: 410px;
+	font-size: 17px;
+	color: #ed3b3d;
+	padding: 5px;
+	background-color: rgba(0,31,52, 0.4);
+	box-shadow: 0px 0px 2px #001f34;
+	border-radius: 5px;
+	line-height: 20px;
+}
+.news2 .price span {
+	color: #fcfcfc;
+}
+.news2 .description {
+	margin-left: 410px;
+    background-color: rgba(0,31,52, 0.4);
+    box-shadow: 0px 0px 2px #001f34;
+	border-radius: 5px;
+	padding: 5px;
+	color: #fcfcfc;
+	font-size: 14px;
+}
+.news2 .description p {
+	margin: 0;
+	padding: 0;
+}
+.news2 .desc-title {
+	margin: 8px 0;
+	font-size: 16px;
+	color: #ed3b3d;
+}
+.news2 img {
+    width: 400px;
+    height: 245px;
+    float: left;
+	margin-right: 10px;
+    box-shadow: 0px 0px 2px #001f34;
+}
+</style>
+
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/77-civis-kveli.html" src="/files/news/2020_03/33e75ff09dd601bbe69f351039152189.jpg"><img src="/files/news/2020_03/small2/33e75ff09dd601bbe69f351039152189.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> ცივის ყველი </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/77-civis-kveli.html"><img src="/files/news/2020_03/33e75ff09dd601bbe69f351039152189.jpg" alt="ცივის ყველი "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/77-civis-kveli.html">ცივის ყველი </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/77-civis-kveli.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/77-civis-kveli.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/75-axali-tseli-2020.html" src="/files/news/2020_01/f524f42cedce18abc51d40dbe8db6922.jpg"><img src="/files/news/2020_01/small2/f524f42cedce18abc51d40dbe8db6922.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> ახალი წელი 2020 </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/75-axali-tseli-2020.html"><img src="/files/news/2020_01/f524f42cedce18abc51d40dbe8db6922.jpg" alt="ახალი წელი 2020 "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/75-axali-tseli-2020.html">ახალი წელი 2020 </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/75-axali-tseli-2020.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/75-axali-tseli-2020.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/74-nikusha-ghaghashvili.html" src="/files/news/2019_12/98b5155a4b0cd37ab2b5c1378c815c68.jpg"><img src="/files/news/2019_12/small2/98b5155a4b0cd37ab2b5c1378c815c68.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> ნიკუშა ღაღაშვილი</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p><strong>გაიცანით ნიკუშა ღაღაშვილი,რომელიც აქტიურადაა ჩართული საოჯახო ბიზნესში.</strong></p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/74-nikusha-ghaghashvili.html"><img src="/files/news/2019_12/98b5155a4b0cd37ab2b5c1378c815c68.jpg" alt="ნიკუშა ღაღაშვილი"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/74-nikusha-ghaghashvili.html">ნიკუშა ღაღაშვილი</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/74-nikusha-ghaghashvili.html"><p><strong>გაიცანით ნიკუშა ღაღაშვილი,რომელიც აქტიურადაა ჩართული საოჯახო ბიზნესში.</strong></p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/74-nikusha-ghaghashvili.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/73-stumrebi-italiidan.html" src="/files/news/2019_12/78b0fb7d034c46f13890008e6f36806b.jpg"><img src="/files/news/2019_12/small2/78b0fb7d034c46f13890008e6f36806b.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> სტუმრები იტალიიდან </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/73-stumrebi-italiidan.html"><img src="/files/news/2019_12/78b0fb7d034c46f13890008e6f36806b.jpg" alt="სტუმრები იტალიიდან "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/73-stumrebi-italiidan.html">სტუმრები იტალიიდან </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/73-stumrebi-italiidan.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/73-stumrebi-italiidan.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/72-stumrebi-safrangetidan.html" src="/files/news/2019_12/1da437178083fdbc33460aefc3346315.jpg"><img src="/files/news/2019_12/small2/1da437178083fdbc33460aefc3346315.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> სტუმრები საფრანგეთიდან </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/72-stumrebi-safrangetidan.html"><img src="/files/news/2019_12/1da437178083fdbc33460aefc3346315.jpg" alt="სტუმრები საფრანგეთიდან "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/72-stumrebi-safrangetidan.html">სტუმრები საფრანგეთიდან </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/72-stumrebi-safrangetidan.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/72-stumrebi-safrangetidan.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/71-stumrebi-tbilisidan.html" src="/files/news/2019_12/6d8f6beadb75c7974fc82e6aed1ef356.jpg"><img src="/files/news/2019_12/small2/6d8f6beadb75c7974fc82e6aed1ef356.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> სტუმრები თბილისიდან</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/71-stumrebi-tbilisidan.html"><img src="/files/news/2019_12/6d8f6beadb75c7974fc82e6aed1ef356.jpg" alt="სტუმრები თბილისიდან"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/71-stumrebi-tbilisidan.html">სტუმრები თბილისიდან</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/71-stumrebi-tbilisidan.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/71-stumrebi-tbilisidan.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/70-civis-kveli.html" src="/files/news/2019_12/e510f3f107fdcdf37e0dce1abd7e1af4.jpg"><img src="/files/news/2019_12/small2/e510f3f107fdcdf37e0dce1abd7e1af4.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> ცივის ყველი </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/70-civis-kveli.html"><img src="/files/news/2019_12/e510f3f107fdcdf37e0dce1abd7e1af4.jpg" alt="ცივის ყველი "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/70-civis-kveli.html">ცივის ყველი </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/70-civis-kveli.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/70-civis-kveli.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/69-saertashoriso-axalgazrduli-asociacia.html" src="/files/news/2019_12/4717114d8bb4d03f60a7afa3dc3cd328.jpg"><img src="/files/news/2019_12/small2/4717114d8bb4d03f60a7afa3dc3cd328.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> საერთაშორისო ახალგაზრდული ასოციაცია</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/69-saertashoriso-axalgazrduli-asociacia.html"><img src="/files/news/2019_12/4717114d8bb4d03f60a7afa3dc3cd328.jpg" alt="საერთაშორისო ახალგაზრდული ასოციაცია"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/69-saertashoriso-axalgazrduli-asociacia.html">საერთაშორისო ახალგაზრდული ასოციაცია</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/69-saertashoriso-axalgazrduli-asociacia.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/69-saertashoriso-axalgazrduli-asociacia.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/66-stumrebi-tbilisidan.html" src="/files/news/2019_12/6e67a1d7fb214708b8586a9dc749495c.jpg"><img src="/files/news/2019_12/small2/6e67a1d7fb214708b8586a9dc749495c.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> სტუმრები თბილისიდან </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/66-stumrebi-tbilisidan.html"><img src="/files/news/2019_12/6e67a1d7fb214708b8586a9dc749495c.jpg" alt="სტუმრები თბილისიდან "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/66-stumrebi-tbilisidan.html">სტუმრები თბილისიდან </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/66-stumrebi-tbilisidan.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/66-stumrebi-tbilisidan.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/65-stumrebi-rusetidan.html" src="/files/news/2019_12/d7d65b847e1c91fb3baa897edc085f80.jpg"><img src="/files/news/2019_12/small2/d7d65b847e1c91fb3baa897edc085f80.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> სტუმრები რუსეთიდან</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/65-stumrebi-rusetidan.html"><img src="/files/news/2019_12/d7d65b847e1c91fb3baa897edc085f80.jpg" alt="სტუმრები რუსეთიდან"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/65-stumrebi-rusetidan.html">სტუმრები რუსეთიდან</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/65-stumrebi-rusetidan.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/65-stumrebi-rusetidan.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/64-stumrebi-rusetidan.html" src="/files/news/2019_12/1679091c5a880faf6fb5e6087eb1b2dc.jpg"><img src="/files/news/2019_12/small2/1679091c5a880faf6fb5e6087eb1b2dc.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> სტუმრები რუსეთიდან </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/64-stumrebi-rusetidan.html"><img src="/files/news/2019_12/1679091c5a880faf6fb5e6087eb1b2dc.jpg" alt="სტუმრები რუსეთიდან "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/64-stumrebi-rusetidan.html">სტუმრები რუსეთიდან </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/64-stumrebi-rusetidan.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/64-stumrebi-rusetidan.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/63-stumrebi-kanadidan.html" src="/files/news/2019_12/c4ca4238a0b923820dcc509a6f75849b.jpg"><img src="/files/news/2019_12/small2/c4ca4238a0b923820dcc509a6f75849b.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> სტუმრები კანადიდან </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/63-stumrebi-kanadidan.html"><img src="/files/news/2019_12/c4ca4238a0b923820dcc509a6f75849b.jpg" alt="სტუმრები კანადიდან "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/63-stumrebi-kanadidan.html">სტუმრები კანადიდან </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/63-stumrebi-kanadidan.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/63-stumrebi-kanadidan.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/62-mecnierebisa-da-inovaciebis--festivali.html" src="/files/news/2019_12/3b87ca4599122a3949e8581f2bc748cc.jpg"><img src="/files/news/2019_12/small2/3b87ca4599122a3949e8581f2bc748cc.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> მეცნიერებისა და ინოვაციების  ფესტივალი</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/62-mecnierebisa-da-inovaciebis--festivali.html"><img src="/files/news/2019_12/3b87ca4599122a3949e8581f2bc748cc.jpg" alt="მეცნიერებისა და ინოვაციების  ფესტივალი"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/62-mecnierebisa-da-inovaciebis--festivali.html">მეცნიერებისა და ინოვაციების  ფესტივალი</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/62-mecnierebisa-da-inovaciebis--festivali.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/62-mecnierebisa-da-inovaciebis--festivali.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/61-dila-mshvidobisa-saqartvelo.html" src="/files/news/2019_12/b2f5ff47436671b6e533d8dc3614845d.jpg"><img src="/files/news/2019_12/small2/b2f5ff47436671b6e533d8dc3614845d.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> დილა მშვიდობისა საქართველო</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/61-dila-mshvidobisa-saqartvelo.html"><img src="/files/news/2019_12/b2f5ff47436671b6e533d8dc3614845d.jpg" alt="დილა მშვიდობისა საქართველო"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/61-dila-mshvidobisa-saqartvelo.html">დილა მშვიდობისა საქართველო</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/61-dila-mshvidobisa-saqartvelo.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/61-dila-mshvidobisa-saqartvelo.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/60-shemodgoma-aq-aris.html" src="/files/news/2019_12/e4da3b7fbbce2345d7772b0674a318d5.jpg"><img src="/files/news/2019_12/small2/e4da3b7fbbce2345d7772b0674a318d5.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> შემოდგომა აქ არის </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/60-shemodgoma-aq-aris.html"><img src="/files/news/2019_12/e4da3b7fbbce2345d7772b0674a318d5.jpg" alt="შემოდგომა აქ არის "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/60-shemodgoma-aq-aris.html">შემოდგომა აქ არის </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/60-shemodgoma-aq-aris.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/60-shemodgoma-aq-aris.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/59-mesaqonleobis-eqspo-2019.html" src="/files/news/2019_12/ccf2f7316725ad5c6322de894447ba11.jpg"><img src="/files/news/2019_12/small2/ccf2f7316725ad5c6322de894447ba11.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> მესაქონლეობის ექსპო 2019</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/59-mesaqonleobis-eqspo-2019.html"><img src="/files/news/2019_12/ccf2f7316725ad5c6322de894447ba11.jpg" alt="მესაქონლეობის ექსპო 2019"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/59-mesaqonleobis-eqspo-2019.html">მესაქონლეობის ექსპო 2019</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/59-mesaqonleobis-eqspo-2019.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/59-mesaqonleobis-eqspo-2019.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/58-gaeros-sursatisa-da-soflis-meurneobis-organizacia.html" src="/files/news/2019_12/d55930f03965659da7442e54ee12f1d8.jpg"><img src="/files/news/2019_12/small2/d55930f03965659da7442e54ee12f1d8.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> გაეროს სურსათისა და სოფლის მეურნეობის ორგანიზაცია</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/58-gaeros-sursatisa-da-soflis-meurneobis-organizacia.html"><img src="/files/news/2019_12/d55930f03965659da7442e54ee12f1d8.jpg" alt="გაეროს სურსათისა და სოფლის მეურნეობის ორგანიზაცია"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/58-gaeros-sursatisa-da-soflis-meurneobis-organizacia.html">გაეროს სურსათისა და სოფლის მეურნეობის ორგანიზაცია</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/58-gaeros-sursatisa-da-soflis-meurneobis-organizacia.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/58-gaeros-sursatisa-da-soflis-meurneobis-organizacia.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/56-Special-American-Business-Internship-Training-Program.html" src="/files/news/2019_11/260a449cc947526b32b9bd315654d6f3.jpg"><img src="/files/news/2019_11/small2/260a449cc947526b32b9bd315654d6f3.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> Special American Business Internship Training Program</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/56-Special-American-Business-Internship-Training-Program.html"><img src="/files/news/2019_11/260a449cc947526b32b9bd315654d6f3.jpg" alt="Special American Business Internship Training Program"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/56-Special-American-Business-Internship-Training-Program.html">Special American Business Internship Training Program</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/56-Special-American-Business-Internship-Training-Program.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/56-Special-American-Business-Internship-Training-Program.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/55-chechili-kveli.html" src="/files/news/2019_07/c4ca4238a0b923820dcc509a6f75849b.jpg"><img src="/files/news/2019_07/small2/c4ca4238a0b923820dcc509a6f75849b.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> ჩეჩილი ყველი</div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+					</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/55-chechili-kveli.html"><img src="/files/news/2019_07/c4ca4238a0b923820dcc509a6f75849b.jpg" alt="ჩეჩილი ყველი"></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/55-chechili-kveli.html">ჩეჩილი ყველი</a></div>
+		<div class="description"><a href="/bolo-siaxleebi/55-chechili-kveli.html"></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/55-chechili-kveli.html">სრულად</a></div>-->
+	</div>
+	<div class="news2 hidden-mobile">
+		<a href="/bolo-siaxleebi/54-samoqalaqo-sazogadoebis-regionuli-forumi-2019.html" src="/files/news/2019_07/8b7902b2b2f1dbd09e0d2d183975d54d.jpg"><img src="/files/news/2019_07/small2/8b7902b2b2f1dbd09e0d2d183975d54d.jpg" /></a>		<div class="price"><span class="fa fa-check"> ფასი:</span> სამოქალაქო საზოგადოების რეგიონული ფორუმი 2019 </div>
+		<!--<div class="price"><span class="fa fa-check"> ფასი:</span> 1 კგ- 0.00 ლარი</div>-->
+		<div class="desc-title">აღწერა</div>
+		<div class="description" style="min-height: 150px;">
+			<p>სამოქალაქო საზოგადოების რეგიონული ფორუმი 2019.</p>		</div>
+	</div>
+	<div class="homepage-news-block hidden-desctop">
+		<!--<div class="date">იან 00  </div>-->
+		<div class="image"><a href="/bolo-siaxleebi/54-samoqalaqo-sazogadoebis-regionuli-forumi-2019.html"><img src="/files/news/2019_07/8b7902b2b2f1dbd09e0d2d183975d54d.jpg" alt="სამოქალაქო საზოგადოების რეგიონული ფორუმი 2019 "></a></div>
+		<div class="title"><a href="/bolo-siaxleebi/54-samoqalaqo-sazogadoebis-regionuli-forumi-2019.html">სამოქალაქო საზოგადოების რეგიონული ფორუმი 2019 </a></div>
+		<div class="description"><a href="/bolo-siaxleebi/54-samoqalaqo-sazogadoebis-regionuli-forumi-2019.html"><p>სამოქალაქო საზოგადოების რეგიონული ფორუმი 2019.</p></a></div>
+		<div class="media-icons"> </div>
+		<hr class="read-more-hr" />
+		<!--<div class="date"><div class="read-more-1"><a href="/bolo-siaxleebi/54-samoqalaqo-sazogadoebis-regionuli-forumi-2019.html">სრულად</a></div>-->
+	</div>
+<div align="center" class="pagination"><span>&lt;&lt;</span><span>&lt;</span><b>1</b><a id="2" href="/bolo-siaxleebi/page/2">2</a><a id="2" href="/bolo-siaxleebi/page/2">&gt;</a><a id="2" href=/bolo-siaxleebi/page/2>&gt;&gt;</a></div>		<div class="clear">&nbsp;</div>
+	</div>
+	<div class="right">
+		<div class="clear"></div>
+		<div class="banner"></div>
+		<div class="clear"></div>
+
+
+		<div class="clear"></div>
+		
+				<iframe name="f174f73b0303c02" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:page Facebook Social Plugin" style="border: medium none; visibility: visible; max-width: 350px; width: 100%; height: 500px;" src="https://www.facebook.com/v2.9/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https://www.facebook.com/tsiviskveli/&amp;container_width=330&amp;hide_cover=false&amp;href=https://www.facebook.com/tsiviskveli/&amp;locale=ka_GE&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline" class="" frameborder="0"></iframe>
+		<div class="clear"></div>
+		<div class="banner"><p><img src="http://tsiviskveli.ge/files/uploads/frame.png" alt="" width="255" height="255" /></p><div class="clear"></div></div>
+		<div class="clear"></div>
+	</div>
+</div>
+<p class="clear">&nbsp;</p></div>
+<div class="clear">&nbsp;</div>
+<div class="footer">
+	&copy; 2026 tsiviskveli
+</div>
+</body>
+</html>
