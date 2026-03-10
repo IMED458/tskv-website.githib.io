@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ცივის ყველი | ყველა პროდუქტი</title>
-  <meta name="description" content="ცივის ყველის ოფიციალური ვებგვერდიდან გადმოტანილი პროდუქტების სრული კატალოგი და სრული აღწერები." />
+  <title>ცივის ყველი | პროდუქტები</title>
+  <meta name="description" content="ცივის ყველის სრული კატალოგი: ყველა სახეობის ყველი ფოტოთი და სახელით, ხოლო აღწერა და ფასი მოდალ ფანჯარაში." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="logo-wrap" href="index.html">
         <img src="assets/images/tsiviskvelilogolight.png" alt="ცივის ყველი ლოგო" />
@@ -35,31 +35,30 @@
     </div>
   </header>
 
-  <main class="section page-wrap">
-    <div class="container">
-      <section class="hero" style="padding-top:0.2rem;">
-        <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
-        <div class="hero-grid">
-          <div>
-            <span class="kicker">ცივის ყველი • კატალოგი</span>
-            <h1>ყველის სახეობები</h1>
-            <p>მონაცემები წამოღებულია page/1 და page/2 გვერდებიდან სრულად. ქვემოთ ნაჩვენებია თითოეული პროდუქტის ფასი და აღწერა ვრცლად.</p>
+  <main class="page-wrap">
+    <section class="hero">
+      <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="kicker">კატალოგი</span>
+          <h1>ყველის სრული ასორტიმენტი</h1>
+          <p>დატოვებულია მხოლოდ ფოტო და სახელი. თითოეულ ბარათზე ღილაკი გახსნის ფანჯარას, სადაც ჩანს აღწერა და ფასი სრულად.</p>
+          <div class="hero-actions">
+            <span class="pill">სულ პროდუქტები: <strong id="product-total">0</strong></span>
           </div>
-          <article class="hero-card">
-            <img src="assets/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg" alt="ყველის ასორტი" />
-            <p>სრული სია, სრული ტექსტები.</p>
-          </article>
         </div>
-      </section>
-
-      <div class="section-head">
-        <div>
-          <h2>ყველის სახეობები - სრულად</h2>
-          <p>წყარო: tsiviskveli.ge/kvelis-saxeobebi. სულ პროდუქტები: <strong id="product-total">0</strong></p>
-        </div>
+        <article class="hero-card" data-reveal>
+          <img src="assets/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg" alt="ცივის ყველის პროდუქცია" />
+          <p>ყველის სახეობები page/1 და page/2 გვერდებიდან გადმოტანილი სრული სიით.</p>
+        </article>
       </div>
-      <div id="products-grid" class="grid cards-2"></div>
-    </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div id="products-grid" class="grid cards-2"></div>
+      </div>
+    </section>
   </main>
 
   <div id="product-modal" class="modal hidden" aria-hidden="true">

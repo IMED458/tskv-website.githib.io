@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ცივის ყველი | კონტაქტი</title>
-  <meta name="description" content="ცივის ყველის საკონტაქტო ინფორმაცია სრულად: ტელეფონები, მისამართი, ელფოსტა და რუკა." />
+  <meta name="description" content="ცივის ყველის საკონტაქტო ინფორმაცია, რუკა და შეტყობინების ფორმა." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="logo-wrap" href="index.html">
         <img src="assets/images/tsiviskvelilogolight.png" alt="ცივის ყველი ლოგო" />
@@ -35,27 +35,60 @@
     </div>
   </header>
 
-  <main class="section">
-    <div class="container contact-box">
-      <article class="panel">
-        <h2>კონტაქტი - სრული ტექსტი</h2>
-        <div class="rich-text" data-content-key="contact_html"></div>
-        <div class="map">
-          <iframe data-map-frame src="about:blank" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <main class="page-wrap">
+    <section class="hero">
+      <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="kicker">კონტაქტი</span>
+          <h1>დაგვიკავშირდი</h1>
+          <p>ტელეფონი, მისამართი, ელფოსტა, რუკა და საკონტაქტო ფორმა ერთ გვერდზე.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://www.facebook.com/tsiviskveli/" target="_blank" rel="noopener">Facebook</a>
+            <a class="btn btn-outline" href="https://www.instagram.com/tsiviskveli/" target="_blank" rel="noopener">Instagram</a>
+          </div>
         </div>
-      </article>
+        <article class="hero-card" data-reveal>
+          <img src="assets/images/9ac26d58521b041eb6fa2e45c0276436.jpg" alt="კონტაქტი" />
+          <p>დაჯავშნა და შეკითხვები - მოგვწერე ფორმის საშუალებით.</p>
+        </article>
+      </div>
+    </section>
 
-      <article class="panel">
-        <h3>მოგვწერეთ</h3>
-        <form class="form-grid" action="#" method="post">
-          <div><label for="name">სახელი</label><input id="name" type="text" required /></div>
-          <div><label for="email">ელფოსტა</label><input id="email" type="email" required /></div>
-          <div><label for="phone">ტელეფონი</label><input id="phone" type="text" /></div>
-          <div><label for="msg">ტექსტი</label><textarea id="msg" rows="6" required></textarea></div>
-          <button class="btn btn-primary" type="submit">გაგზავნა</button>
-        </form>
-      </article>
-    </div>
+    <section class="section alt">
+      <div class="container contact-box">
+        <article class="panel" data-reveal>
+          <h2>საკონტაქტო ინფორმაცია</h2>
+          <div class="rich-text" data-content-key="contact_html"></div>
+          <div class="map">
+            <iframe data-map-frame src="about:blank" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </article>
+
+        <article class="panel" data-reveal>
+          <h2>მოგვწერეთ</h2>
+          <form class="form-grid" action="#" method="post">
+            <div>
+              <label for="name">სახელი</label>
+              <input id="name" type="text" required />
+            </div>
+            <div>
+              <label for="email">ელფოსტა</label>
+              <input id="email" type="email" required />
+            </div>
+            <div>
+              <label for="phone">ტელეფონი</label>
+              <input id="phone" type="text" />
+            </div>
+            <div>
+              <label for="msg">შეტყობინება</label>
+              <textarea id="msg" rows="6" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">გაგზავნა</button>
+          </form>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

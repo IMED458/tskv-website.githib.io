@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ცივის ყველი | სერვისები სრულად</title>
-  <meta name="description" content="გიდებისთვის, ტურისტებისთვის და მაღაზიებისთვის სრული ინფორმაცია ოფიციალური საიტიდან." />
+  <title>ცივის ყველი | სერვისები</title>
+  <meta name="description" content="ცივის ყველის სერვისები გიდებისთვის, ტურისტებისთვის და მაღაზიებისთვის - ღილაკებით და დეტალური ფანჯრებით." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="logo-wrap" href="index.html">
         <img src="assets/images/tsiviskvelilogolight.png" alt="ცივის ყველი ლოგო" />
@@ -35,65 +35,97 @@
     </div>
   </header>
 
-  <main class="section page-wrap">
-    <div class="container">
-      <section class="hero" style="padding-top:0.2rem;">
-        <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
-        <div class="hero-grid">
-          <div>
-            <span class="kicker">სერვისები • სრული ინფორმაცია</span>
-            <h1>აირჩიე კატეგორია და ნახე დეტალები</h1>
-            <p>
-              განლაგება დაბრუნებულია უფრო სუფთა, პირვანდელ სტილთან ახლო ხედზე.
-              ქვემოთ ღილაკებზე დაჭერით იხსნება პატარა ფანჯარა სრულ ტექსტებთან.
-            </p>
+  <main class="page-wrap">
+    <section class="hero">
+      <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="kicker">სერვისები</span>
+          <h1>შეარჩიე სერვისი და გახსენი დეტალები</h1>
+          <p>სერვისები გადაყვანილია დახვეწილ ღილაკ-ბარათებზე. თითოეულზე დაჭერით გაიხსნება მცირე ფანჯარა სრულ ტექსტთან ერთად.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">დაჯავშნა</a>
+            <a class="btn btn-outline" href="products.html">პროდუქტები</a>
           </div>
-          <article class="hero-card">
-            <img src="assets/images/s.jpg" alt="დეგუსტაცია და სერვისები" />
-            <p>გიდებისთვის, ტურისტებისთვის, მაღაზიებისთვის, გამოცდილება და ხარისხი.</p>
-          </article>
         </div>
-      </section>
+        <article class="hero-card" data-reveal>
+          <img src="assets/images/s.jpg" alt="ცივის ყველის სერვისები" />
+          <p>გიდებისთვის, ტურისტებისთვის, მაღაზიებისთვის და პარტნიორებისთვის.</p>
+        </article>
+      </div>
+    </section>
 
-      <div class="section-head">
-        <div>
-          <h2>სერვისების ფანჯრები</h2>
-          <p>ღილაკზე დაჭერით გაიხსნება სრულფასოვანი აღწერა.</p>
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <h2>სერვის-ღილაკები</h2>
+            <p>დიზაინი შენარჩუნებულია პრიორიტეტულად ვიზუალურად სუფთა და გამოყენებითად მარტივი.</p>
+          </div>
+        </div>
+
+        <div class="service-actions">
+          <button class="service-btn" type="button" data-service-key="guides_html" data-service-title="გიდებისთვის" data-reveal>
+            <img class="service-btn-cover" src="assets/images/s.jpg" alt="გიდებისთვის" />
+            <span class="service-btn-content">
+              <span class="service-btn-title">გიდებისთვის</span>
+              <span class="service-btn-sub">ტურისტული პაკეტები და თანამშრომლობა</span>
+              <span class="service-btn-arrow">→</span>
+            </span>
+          </button>
+
+          <button class="service-btn" type="button" data-service-key="tourists_html" data-service-title="ტურისტებისთვის" data-reveal>
+            <img class="service-btn-cover" src="assets/images/v.jpg" alt="ტურისტებისთვის" />
+            <span class="service-btn-content">
+              <span class="service-btn-title">ტურისტებისთვის</span>
+              <span class="service-btn-sub">დეგუსტაცია, ვიზიტი და გამოცდილება</span>
+              <span class="service-btn-arrow">→</span>
+            </span>
+          </button>
+
+          <button class="service-btn" type="button" data-service-key="shops_html" data-service-title="მაღაზიებისთვის" data-reveal>
+            <img class="service-btn-cover" src="assets/images/9ac26d58521b041eb6fa2e45c0276436.jpg" alt="მაღაზიებისთვის" />
+            <span class="service-btn-content">
+              <span class="service-btn-title">მაღაზიებისთვის</span>
+              <span class="service-btn-sub">დისტრიბუცია და პროდუქციის მიწოდება</span>
+              <span class="service-btn-arrow">→</span>
+            </span>
+          </button>
+
+          <button class="service-btn" type="button" data-service-key="experience_html" data-service-title="გამოცდილება" data-reveal>
+            <img class="service-btn-cover" src="assets/images/138d8e2ffad2d99e4e918aa6d5e81dd3.jpg" alt="გამოცდილება" />
+            <span class="service-btn-content">
+              <span class="service-btn-title">გამოცდილება</span>
+              <span class="service-btn-sub">ვიზიტის პრაქტიკული პროცესები</span>
+              <span class="service-btn-arrow">→</span>
+            </span>
+          </button>
+
+          <button class="service-btn" type="button" data-service-key="service_html" data-service-title="მომსახურეობა" data-reveal>
+            <img class="service-btn-cover" src="assets/images/c70fd4260c9eb90bc0ba9d047c068eb8.jpg" alt="მომსახურეობა" />
+            <span class="service-btn-content">
+              <span class="service-btn-title">მომსახურეობა</span>
+              <span class="service-btn-sub">რას გთავაზობთ ადგილზე</span>
+              <span class="service-btn-arrow">→</span>
+            </span>
+          </button>
+
+          <button class="service-btn" type="button" data-service-key="quality_html" data-service-title="ხარისხი" data-reveal>
+            <img class="service-btn-cover" src="assets/images/35afcf7582ee51122e0ebe39f0b06af7.jpg" alt="ხარისხი" />
+            <span class="service-btn-content">
+              <span class="service-btn-title">ხარისხი</span>
+              <span class="service-btn-sub">სტანდარტები და პროდუქტის უსაფრთხოება</span>
+              <span class="service-btn-arrow">→</span>
+            </span>
+          </button>
         </div>
       </div>
-
-      <div class="service-actions">
-        <button class="service-btn" type="button" data-service-key="guides_html" data-service-title="გიდებისთვის">
-          <span class="service-btn-title">გიდებისთვის</span>
-          <span class="service-btn-sub">პაკეტები და პირობები</span>
-        </button>
-        <button class="service-btn" type="button" data-service-key="tourists_html" data-service-title="ტურისტებისთვის">
-          <span class="service-btn-title">ტურისტებისთვის</span>
-          <span class="service-btn-sub">ფოტოები და ვიზიტის ფორმატი</span>
-        </button>
-        <button class="service-btn" type="button" data-service-key="shops_html" data-service-title="მაღაზიებისთვის">
-          <span class="service-btn-title">მაღაზიებისთვის</span>
-          <span class="service-btn-sub">პროდუქციის მიწოდება</span>
-        </button>
-        <button class="service-btn" type="button" data-service-key="experience_html" data-service-title="გამოცდილება">
-          <span class="service-btn-title">გამოცდილება</span>
-          <span class="service-btn-sub">პრაქტიკული ჩართულობა</span>
-        </button>
-        <button class="service-btn" type="button" data-service-key="service_html" data-service-title="მომსახურეობა">
-          <span class="service-btn-title">მომსახურეობა</span>
-          <span class="service-btn-sub">რას გთავაზობთ</span>
-        </button>
-        <button class="service-btn" type="button" data-service-key="quality_html" data-service-title="ხარისხი">
-          <span class="service-btn-title">ხარისხი</span>
-          <span class="service-btn-sub">სტანდარტი და უსაფრთხოება</span>
-        </button>
-      </div>
-    </div>
+    </section>
   </main>
 
   <div id="service-modal" class="modal hidden" aria-hidden="true">
     <div id="service-modal-overlay" class="modal-overlay"></div>
-    <div class="modal-panel service-modal-panel" role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
       <button id="service-modal-close" class="modal-close" type="button" aria-label="დახურვა">×</button>
       <h3 id="service-modal-title"></h3>
       <div id="service-modal-content" class="rich-text"></div>

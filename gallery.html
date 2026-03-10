@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ცივის ყველი | გალერეა და სიახლეები</title>
-  <meta name="description" content="ოფიციალური ფოტოგალერეა და ბოლო სიახლეები." />
+  <meta name="description" content="ცივის ყველის გალერეა, ფოტოები, ტურისტული ვიზიტის ბლოკი და ბოლო სიახლეები." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="logo-wrap" href="index.html">
         <img src="assets/images/tsiviskvelilogolight.png" alt="ცივის ყველი ლოგო" />
@@ -35,50 +35,62 @@
     </div>
   </header>
 
-  <main class="section page-wrap">
-    <div class="container">
-      <section class="hero" style="padding-top:0.2rem; padding-bottom:1.2rem;">
-        <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
-        <div class="hero-grid">
+  <main class="page-wrap">
+    <section class="hero">
+      <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="kicker">გალერეა</span>
+          <h1>ჩვენი სივრცე ფოტოებში</h1>
+          <p>ქვემოთ ჩანს საწარმოს ფოტოები, სტუმრების ვიზიტები და ბოლო სიახლეების ბლოკი.</p>
+        </div>
+        <article class="hero-card" data-reveal>
+          <img src="assets/images/v.jpg" alt="ცივის ყველი - ვენახი" />
+          <p>ყურძნის ატმოსფერო და კახური ტრადიციის ვიზუალური ხაზი.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head" data-reveal>
           <div>
-            <span class="kicker">გალერეა • ცივის ყველი</span>
-            <h1>ფოტოები და ვიზუალური ისტორია</h1>
-            <p>სტრუქტურა შენს ჩაგდებულ დიზაინს მიყვება: დეკორატიული ელემენტები, დიდი ჰედერი და ბარათების განლაგება.</p>
+            <h2>ფოტოგალერეა</h2>
+            <p>ოფიციალური გვერდიდან და მიმდინარე მასალებიდან გადმოტანილი ფოტოები.</p>
           </div>
-          <article class="hero-card">
-            <img src="assets/images/v.jpg" alt="ცივის ყველის გალერეა" />
-            <p>ყურძენი, ყველი, ღვინო და სტუმრები ერთ სივრცეში.</p>
-          </article>
         </div>
-      </section>
 
-      <div class="section-head">
-        <div>
-          <h2>გალერეა</h2>
-          <p>ოფიციალური საიტიდან გადმოტანილი ფოტომასალა.</p>
+        <div class="gallery" data-reveal>
+          <img class="g1" src="assets/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg" alt="საწარმო" />
+          <img class="g2" src="assets/images/9ac26d58521b041eb6fa2e45c0276436.jpg" alt="პროდუქტები" />
+          <img class="g3" src="assets/images/s.jpg" alt="დეგუსტაცია" />
+          <img class="g4" src="assets/images/138d8e2ffad2d99e4e918aa6d5e81dd3.jpg" alt="ვიზიტორი" />
+          <img class="g5" src="assets/images/screenshot_20190329-145640_videoplayer.jpg" alt="ვიდეო კადრი" />
+          <img class="g6" src="assets/images/c70fd4260c9eb90bc0ba9d047c068eb8.jpg" alt="ყველის წარმოება" />
         </div>
       </div>
+    </section>
 
-      <div class="gallery">
-        <img class="g1" src="assets/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg" alt="საწარმო" />
-        <img class="g2" src="assets/images/9ac26d58521b041eb6fa2e45c0276436.jpg" alt="პროდუქტი" />
-        <img class="g3" src="assets/images/s.jpg" alt="დეგუსტაცია" />
-        <img class="g4" src="assets/images/v.jpg" alt="სტუმრები" />
-        <img class="g5" src="assets/images/screenshot_20190329-145640_videoplayer.jpg" alt="ვიდეო ფოტოკადრი" />
-      </div>
-
-      <section class="section" style="padding-bottom:0.8rem;">
-        <div class="panel">
-          <h3>ტურისტებისთვის განთავსებული სრული ფოტო ბლოკი</h3>
+    <section class="section">
+      <div class="container">
+        <article class="panel" data-reveal>
+          <h2>ტურისტებისთვის განთავსებული სრული ინფორმაცია</h2>
           <div class="rich-text" data-content-key="tourists_html"></div>
-        </div>
-      </section>
+        </article>
+      </div>
+    </section>
 
-      <section class="section" style="padding-top:0.3rem;">
-        <div class="section-head"><h3>ბოლო სიახლეები</h3></div>
-        <div id="news-grid" class="grid cards-2"></div>
-      </section>
-    </div>
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <h2>ბოლო სიახლეები</h2>
+            <p>ოფიციალური ვებსაიტიდან გადმოტანილი სიახლეების სრული ტექსტური მასალა.</p>
+          </div>
+        </div>
+        <div id="news-grid" class="grid cards-2 news-grid" data-news-limit="8"></div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

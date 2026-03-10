@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ცივის ყველი | მთავარი</title>
-  <meta name="description" content="ცივის ყველი - სრული ინფორმაცია, პროდუქტები, სერვისები და კონტაქტი." />
+  <meta name="description" content="ცივის ყველი - მრავალგვერდიანი ვებსაიტი სრული ინფორმაციით: პროდუქტები, სერვისები, გალერეა და კონტაქტი." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="logo-wrap" href="index.html">
         <img src="assets/images/tsiviskvelilogolight.png" alt="ცივის ყველი ლოგო" />
@@ -40,47 +40,101 @@
   </header>
 
   <main class="page-wrap">
-    <section class="hero">
+    <section class="hero hero-home">
+      <div class="hero-home-bg"><img src="assets/images/v.jpg" alt="ცივის ყველი - ვენახი" /></div>
       <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
-      <div class="container hero-grid">
-        <div>
-          <span class="kicker">კახეთი • თელავი • სოფელი კურდღელაური</span>
-          <h1>ცივის ყველი - სრულად განახლებული კატალოგი და ინფორმაცია</h1>
-          <p>ამ ვებსაიტზე გადმოტანილია „ცივის ყველი“-ს ტექსტები და პროდუქტების სრული სია (წყარო: tsiviskveli.ge), შეკვეცის გარეშე.</p>
+      <div class="container">
+        <div class="hero-content" data-reveal>
+          <span class="kicker">ტრადიცია და ხარისხი 2008 წლიდან</span>
+          <h1>ცივის ყველი</h1>
+          <p>ნატურალური რძის პროდუქტები და ტრადიციული ქართული ყველი. სრულად განახლებული, მრავალგვერდიანი ვებსაიტი ყველა ინფორმაციისა და კატალოგის ერთ სივრცეში.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="products.html">ყველა პროდუქტი</a>
-            <a class="btn btn-outline" href="services.html">სერვისები სრულად</a>
+            <a class="btn btn-primary" href="products.html">პროდუქცია</a>
+            <a class="btn btn-light" href="services.html">სერვისები</a>
+            <a class="btn btn-light" href="contact.html">დაჯავშნა</a>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item"><span class="stat-value">31</span><span class="stat-label">პროდუქტი</span></div>
+            <div class="stat-item"><span class="stat-value">20</span><span class="stat-label">სიახლე</span></div>
+            <div class="stat-item"><span class="stat-value">100%</span><span class="stat-label">ნატურალური</span></div>
           </div>
         </div>
-        <article class="hero-card">
-          <img src="assets/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg" alt="ცივის ყველის საწარმო" />
-          <p>ტრადიციული ყველი, დეგუსტაცია, მომსახურეობა და ხარისხის სტანდარტი ერთ სივრცეში.</p>
-        </article>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"></div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <h2>საიტის ტაბები</h2>
+            <p>ერთგვერდიანი ვერსიის ნაცვლად ყველა ნაწილი არის ცალკე გვერდზე გადანაწილებული ზუსტად ნავიგაციის ტაბებით.</p>
+          </div>
+        </div>
+        <div class="preview-grid">
+          <article class="preview-card" data-reveal>
+            <img src="assets/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg" alt="ჩვენს შესახებ" />
+            <div class="content">
+              <h3>ჩვენს შესახებ</h3>
+              <p>საწარმოს ისტორია, გამოცდილება და ხარისხის სტანდარტი სრული ტექსტებით.</p>
+              <a class="btn btn-outline" href="about.html">გახსნა</a>
+            </div>
+          </article>
+          <article class="preview-card" data-reveal>
+            <img src="assets/images/35afcf7582ee51122e0ebe39f0b06af7.jpg" alt="პროდუქტები" />
+            <div class="content">
+              <h3>პროდუქტები</h3>
+              <p>ყველის ყველა სახეობა ფოტოთი და სახელით, ხოლო აღწერა/ფასი მოდალ ფანჯარაში.</p>
+              <a class="btn btn-outline" href="products.html">კატალოგი</a>
+            </div>
+          </article>
+          <article class="preview-card" data-reveal>
+            <img src="assets/images/s.jpg" alt="სერვისები" />
+            <div class="content">
+              <h3>სერვისები</h3>
+              <p>ღილაკებზე დაფუძნებული სერვისები: თითოეული ელემენტი ხსნის დეტალურ ფანჯარას.</p>
+              <a class="btn btn-outline" href="services.html">სერვისები</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <div>
-            <h2>სრული ინფორმაცია</h2>
-            <p>ქვემოთ განთავსებულია ოფიციალური საიტიდან გადმოტანილი ტექსტები სრულად.</p>
+            <h2>ოფიციალური ტექსტები</h2>
+            <p>ქვემოთ დატვირთულია ოფიციალური საიტიდან გადმოტანილი ტექსტური ბლოკები.</p>
           </div>
         </div>
-        <div class="grid cards-3">
-          <article class="panel">
+        <div class="feature-grid">
+          <article class="feature-card" data-reveal>
             <h3>გამოცდილება</h3>
             <div class="rich-text" data-content-key="experience_html"></div>
           </article>
-          <article class="panel">
+          <article class="feature-card" data-reveal>
             <h3>მომსახურეობა</h3>
             <div class="rich-text" data-content-key="service_html"></div>
           </article>
-          <article class="panel">
+          <article class="feature-card" data-reveal>
             <h3>ხარისხი</h3>
             <div class="rich-text" data-content-key="quality_html"></div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <h2>ბოლო სიახლეები</h2>
+            <p>სიახლეების სრული არქივი იხილე გალერეის გვერდზე.</p>
+          </div>
+          <a class="btn btn-outline" href="gallery.html">ყველა სიახლე</a>
+        </div>
+        <div id="news-grid" class="grid cards-2 news-grid" data-news-limit="4"></div>
       </div>
     </section>
   </main>
@@ -89,12 +143,8 @@
     <div class="container footer-inner">
       <div>© 2026 ცივის ყველი</div>
       <div class="social-icons">
-        <a href="https://www.facebook.com/tsiviskveli/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/tsiviskveli/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5A3.95 3.95 0 0 0 7.75 20.2h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Z"/></svg>
-        </a>
+        <a href="https://www.facebook.com/tsiviskveli/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+        <a href="https://www.instagram.com/tsiviskveli/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5A3.95 3.95 0 0 0 7.75 20.2h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Z"/></svg></a>
       </div>
     </div>
   </footer>

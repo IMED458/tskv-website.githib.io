@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ცივის ყველი | ჩვენს შესახებ</title>
-  <meta name="description" content="ოფიციალური ტექსტი: ჩვენს შესახებ, მიღწევები და თანამშრომელი მაღაზიები." />
+  <meta name="description" content="ცივის ყველის ისტორია, გამოცდილება, ხარისხი და სრული ტექსტური ინფორმაცია." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="logo-wrap" href="index.html">
         <img src="assets/images/tsiviskvelilogolight.png" alt="ცივის ყველი ლოგო" />
@@ -35,28 +35,48 @@
     </div>
   </header>
 
-  <main class="section page-wrap">
-    <div class="container">
-      <section class="hero" style="padding-top:0.2rem; padding-bottom:1.2rem;">
-        <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
-        <div class="hero-grid">
-          <div>
-            <span class="kicker">ჩვენს შესახებ</span>
-            <h1>საწარმო „ცივის ყველი“</h1>
-            <p>სტრუქტურა გადმოყვანილია შენს დიზაინზე, მრავალგვერდიანი ფორმატით.</p>
+  <main class="page-wrap">
+    <section class="hero">
+      <div class="hero-decor"><span class="d1">🍇</span><span class="d2">🧀</span><span class="d3">🍷</span></div>
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="kicker">ჩვენი ისტორია</span>
+          <h1>ცივის ყველი - ტრადიცია და გამოცდილება</h1>
+          <p>ამ გვერდზე სრულად განთავსებულია „ჩვენს შესახებ“ ოფიციალური ტექსტები, ასევე ხარისხისა და მომსახურეობის ბლოკები.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="products.html">პროდუქტები</a>
+            <a class="btn btn-outline" href="contact.html">დაკავშირება</a>
           </div>
-          <article class="hero-card">
-            <img src="assets/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg" alt="ცივის ყველი საწარმო" />
-            <p>ტრადიცია, ხარისხი და კახური გარემო.</p>
+        </div>
+        <article class="hero-card" data-reveal>
+          <img src="assets/images/eab71244afb687f16d8c4f5ee9d6ef0e.jpg" alt="ცივის ყველის საწარმო" />
+          <p>კახეთის ტრადიციებით შექმნილი ნატურალური ყველის წარმოება.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container split">
+        <article class="panel" data-reveal>
+          <h2>ჩვენს შესახებ - სრულად</h2>
+          <div class="rich-text" data-content-key="about_html"></div>
+        </article>
+        <div class="grid" data-reveal>
+          <article class="feature-card">
+            <h3>გამოცდილება</h3>
+            <div class="rich-text" data-content-key="experience_html"></div>
+          </article>
+          <article class="feature-card">
+            <h3>მომსახურეობა</h3>
+            <div class="rich-text" data-content-key="service_html"></div>
+          </article>
+          <article class="feature-card">
+            <h3>ხარისხი</h3>
+            <div class="rich-text" data-content-key="quality_html"></div>
           </article>
         </div>
-      </section>
-
-      <div class="panel">
-        <h2>ჩვენს შესახებ - სრული ტექსტი</h2>
-        <div class="rich-text" data-content-key="about_html"></div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
